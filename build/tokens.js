@@ -7048,13 +7048,13 @@ export default {
   },
   breakpoint: {
     sm: {
-      $type: "float",
-      $value: 640,
+      $type: "dimension",
+      $value: "640px",
       filePath: "source/breakpoints.json",
       isSource: true,
       original: {
-        $type: "float",
-        $value: 640,
+        $type: "dimension",
+        $value: "640px",
       },
       name: "BreakpointSm",
       attributes: {
@@ -7064,13 +7064,13 @@ export default {
       path: ["breakpoint", "sm"],
     },
     md: {
-      $type: "float",
-      $value: 768,
+      $type: "dimension",
+      $value: "768px",
       filePath: "source/breakpoints.json",
       isSource: true,
       original: {
-        $type: "float",
-        $value: 768,
+        $type: "dimension",
+        $value: "768px",
       },
       name: "BreakpointMd",
       attributes: {
@@ -7080,13 +7080,13 @@ export default {
       path: ["breakpoint", "md"],
     },
     lg: {
-      $type: "float",
-      $value: 1024,
+      $type: "dimension",
+      $value: "1024px",
       filePath: "source/breakpoints.json",
       isSource: true,
       original: {
-        $type: "float",
-        $value: 1024,
+        $type: "dimension",
+        $value: "1024px",
       },
       name: "BreakpointLg",
       attributes: {
@@ -7096,13 +7096,13 @@ export default {
       path: ["breakpoint", "lg"],
     },
     xl: {
-      $type: "float",
-      $value: 1280,
+      $type: "dimension",
+      $value: "1280px",
       filePath: "source/breakpoints.json",
       isSource: true,
       original: {
-        $type: "float",
-        $value: 1280,
+        $type: "dimension",
+        $value: "1280px",
       },
       name: "BreakpointXl",
       attributes: {
@@ -7112,13 +7112,13 @@ export default {
       path: ["breakpoint", "xl"],
     },
     "2xl": {
-      $type: "float",
-      $value: 1536,
+      $type: "dimension",
+      $value: "1536px",
       filePath: "source/breakpoints.json",
       isSource: true,
       original: {
-        $type: "float",
-        $value: 1536,
+        $type: "dimension",
+        $value: "1536px",
       },
       name: "Breakpoint2xl",
       attributes: {

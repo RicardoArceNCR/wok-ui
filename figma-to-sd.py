@@ -556,8 +556,10 @@ def needs_px(path):
 
 
 def needs_px_breakpoint(path, collection_name):
-    """breakpoints.json resulta en paths top-level: ['sm'], ['md'], etc."""
-    return collection_name == 'breakpoints' and len(path) == 1
+    """breakpoints.json resulta en paths ['breakpoint', 'sm'], etc. (heredado
+    de divergentes-ui esperaba ['sm'] y los dejaba sin unidad: un var() de
+    --breakpoint-* en el sitio daba un número pelado, CSS inválido)."""
+    return collection_name == 'breakpoints' and len(path) == 2 and path[0] == 'breakpoint'
 
 
 # ─── Unidades: ms ───────────────────────────────────────────────────────────

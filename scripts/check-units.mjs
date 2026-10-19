@@ -30,10 +30,6 @@ const ALLOW = [
   { re: /^--typography-weight-|-weight$/, why: "font-weight es un entero" },
   { re: /^--typography-leading-/, why: "line-height sin unidad es un ratio (intencional)" },
   {
-    re: /^--breakpoint-/,
-    why: "theme-bridge.template.css los redefine con px en su bloque @theme",
-  },
-  {
     re: /^--typography-(heading|subheading|body|label|caption|hero)-size$/,
     why: "preexistente: escala vieja, superada por --typography-styles-*. Ver DEUDA en README",
   },
