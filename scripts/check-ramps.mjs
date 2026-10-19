@@ -23,8 +23,7 @@
  *      el hue no salta mas de MAX_DHUE grados. Una familia es una familia.
  *   3. CONTINUIDAD DE CROMA — la saturacion no salta mas de MAX_C_RATIO
  *      entre vecinos. Caza el empalme de dos familias aun cuando el stop
- *      claro sea demasiado gris para tener un hue medible — que es
- *      exactamente el caso de neutral/700 -> neutral/800.
+ *      claro sea demasiado gris para tener un hue medible.
  *   4. NEUTRAL ES NEUTRAL — la familia `neutral` no supera MAX_C_NEUTRAL
  *      de croma en ningun stop. Un gris con tinte deja de servir como
  *      gris: compite con la marca en vez de sostenerla.
@@ -48,16 +47,13 @@ import path from "node:path";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const FILES = ["build/tokens.css"];
 
-/* Umbrales calibrados contra rampas reales, no elegidos a ojo.
-   Medidos sobre amber/sky/clay/jade de la propuesta (las 4 "sanas"):
-     - salto de hue entre vecinos:      max 5 grados   -> tolerancia 30
-     - ratio de croma entre vecinos:    max 2.3x       -> tolerancia 3
-     - croma del neutral calido actual: max 0.0062 en 50-700 (aceptable)
-                                        0.0242 en 800  (el bug)
-                                        -> corte en 0.01: deja pasar un
-                                        neutral sutilmente calido, corta
-                                        los 3 stops rotos.
-   Cada tolerancia deja margen >=30% sobre el peor caso sano. */
+/* Umbrales: tolerancias con margen sobre rampas sanas, no elegidas a ojo.
+   Medido sobre las 9 familias de WOK (v0.1.0):
+     - salto de hue entre vecinos:   max 4.4 grados -> tolerancia 30
+     - ratio de croma entre vecinos: max 2.5x       -> tolerancia 3
+     - croma de `neutral`:           max 0.008      -> corte en 0.01
+   El corte de `neutral` deja pasar un gris sutilmente calido y corta un
+   gris con tinte; el marfil (croma 0.013) no entra, por eso va en `paper`. */
 const MAX_DHUE = 30; // grados entre stops vecinos
 const MIN_C_HUE = 0.01; // debajo de esto el hue es ruido numerico
 const MAX_C_RATIO = 3; // salto de croma entre vecinos
@@ -180,8 +176,8 @@ for (const file of FILES) {
     }
 
     // 3. continuidad de croma — la regla que caza un empalme de familias
-    //    aunque el stop claro sea demasiado gris para tener hue medible.
-    //    Es el caso de neutral/700 (C=0.004) -> neutral/800 (C=0.024).
+    //    aunque el stop claro sea demasiado gris para tener hue medible
+    //    (un gris de C=0.004 seguido de uno de C=0.024).
     if (!allowed(family, "croma")) {
       for (let i = 1; i < pts.length; i++) {
         const a = pts[i - 1];

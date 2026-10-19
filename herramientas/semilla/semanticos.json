@@ -1,10 +1,5 @@
 {
-  "_doc": "Semanticos WOK. Mismos nombres que divergentes-ui/source/raw/semanticos.json; ref = primitivo de propuesta.json. feedback/error apunta a la familia danger. Generado por scripts/semanticos.py.",
-  "_renombrados": {
-    "brand/gold": "brand/accent (naranja)",
-    "brand/leaf": "brand/support (lima)",
-    "brand/sky": "sin equivalente: WOK no tiene azul de marca (info vive en feedback/info y focus)"
-  },
+  "_doc": "Semanticos WOK de la propuesta de color aprobada; ref = primitivo de propuesta.json. feedback/error apunta a la familia danger. Los cambios posteriores no se editan acá: van en AJUSTES de herramientas/semilla-figma.py.",
   "claro": {
     "background/page": {
       "ref": "color/paper/50",

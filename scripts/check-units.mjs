@@ -29,10 +29,6 @@ const ALLOW = [
   { re: /^--opacity-/, why: "opacity es un ratio 0..1" },
   { re: /^--typography-weight-|-weight$/, why: "font-weight es un entero" },
   { re: /^--typography-leading-/, why: "line-height sin unidad es un ratio (intencional)" },
-  {
-    re: /^--typography-(heading|subheading|body|label|caption|hero)-size$/,
-    why: "preexistente: escala vieja, superada por --typography-styles-*. Ver DEUDA en README",
-  },
 ];
 
 const BARE_NUMBER = /^-?\d+(\.\d+)?$/;
