@@ -1,0 +1,164 @@
+{
+  "_doc": "Propuesta de primitivos de color WOK. Familias por rol, paradas 50-950 en OKLCH. Generado por scripts/rampas.py.",
+  "manual": {
+    "Verde Bosque Profundo": {
+      "declarado": "#1A3129",
+      "muestra": "#203029",
+      "parada": "brand-900"
+    },
+    "Verde Lima Suave": {
+      "declarado": "#A7CC73",
+      "muestra": "#AECB7D",
+      "parada": "support-400"
+    },
+    "Naranja Intenso": {
+      "declarado": "#FF5100",
+      "muestra": "#EC5E2A",
+      "parada": "accent-500"
+    },
+    "Marfil Calido": {
+      "declarado": "#F4EFE6",
+      "muestra": "#F3EFE7",
+      "parada": "paper-50"
+    }
+  },
+  "color": {
+    "neutral": {
+      "descripcion": "Grises de interfaz (texto secundario, bordes, deshabilitado). Mismo matiz que el marfil, croma <= 0.008: calido sin competir con la marca.",
+      "hue": 82.4,
+      "50": "#F8F7F4",
+      "100": "#EEECEA",
+      "200": "#DEDCD8",
+      "300": "#C9C7C3",
+      "400": "#A7A49F",
+      "500": "#85837E",
+      "600": "#6B6964",
+      "700": "#55524E",
+      "800": "#3F3D39",
+      "900": "#2A2926",
+      "950": "#171613"
+    },
+    "paper": {
+      "descripcion": "Soporte de marca (papel). paper-50 = Marfil Calido. Va aparte de neutral porque su croma (0.013) supera el 0.010 de la regla 4.",
+      "hue": 82.4,
+      "50": "#F4EFE6",
+      "100": "#E9E2D6",
+      "200": "#DAD1C1",
+      "300": "#C7BCA8",
+      "400": "#A89D88",
+      "500": "#897F6C",
+      "600": "#6E6555",
+      "700": "#564F42",
+      "800": "#3F3A2F",
+      "900": "#2A261E",
+      "950": "#191610"
+    },
+    "brand": {
+      "descripcion": "Marca principal: Verde Bosque Profundo = brand-900.",
+      "hue": 169.8,
+      "50": "#EFFAF5",
+      "100": "#E1F1EB",
+      "200": "#C6E2D7",
+      "300": "#A2CCBC",
+      "400": "#79AF9B",
+      "500": "#518E79",
+      "600": "#3A7360",
+      "700": "#2D5C4C",
+      "800": "#214338",
+      "900": "#1A3129",
+      "950": "#11221C"
+    },
+    "accent": {
+      "descripcion": "Acento: Naranja Intenso = accent-500.",
+      "hue": 37.9,
+      "50": "#FFF4F1",
+      "100": "#FFE5DC",
+      "200": "#FFC7B6",
+      "300": "#FFA589",
+      "400": "#FF7E56",
+      "500": "#FF5100",
+      "600": "#D44304",
+      "700": "#AC380A",
+      "800": "#862C0C",
+      "900": "#64230D",
+      "950": "#441607"
+    },
+    "support": {
+      "descripcion": "Apoyo: Verde Lima Suave = support-400.",
+      "hue": 127.4,
+      "50": "#F2FDE4",
+      "100": "#E5F8CD",
+      "200": "#D2EFAE",
+      "300": "#BDDF90",
+      "400": "#A7CC73",
+      "500": "#8AAC57",
+      "600": "#6F8C44",
+      "700": "#556C33",
+      "800": "#405126",
+      "900": "#2D3B1A",
+      "950": "#1D2611"
+    },
+    "success": {
+      "descripcion": "Exito. Verde frio-medio (152 grados): entre lima (127) y bosque (170), mas saturado que bosque y mas oscuro que lima.",
+      "hue": 152,
+      "50": "#F0FAF2",
+      "100": "#DCF4E2",
+      "200": "#BCE8C6",
+      "300": "#90D6A3",
+      "400": "#60BD7D",
+      "500": "#3AA460",
+      "600": "#24884B",
+      "700": "#1D6D3C",
+      "800": "#16542D",
+      "900": "#103D20",
+      "950": "#0A2714"
+    },
+    "info": {
+      "descripcion": "Informacion. Azul apagado; unica familia fria, no compite con la marca.",
+      "hue": 245,
+      "50": "#F0F8FF",
+      "100": "#DEEFFF",
+      "200": "#C0DFFA",
+      "300": "#97C9F3",
+      "400": "#67ADE7",
+      "500": "#3B93D5",
+      "600": "#2179B7",
+      "700": "#156195",
+      "800": "#0F4A73",
+      "900": "#0C3654",
+      "950": "#082237"
+    },
+    "warning": {
+      "descripcion": "Advertencia. Ambar/ocre (78 grados), 40 grados lejos del naranja de marca.",
+      "hue": 78,
+      "50": "#FEF6EA",
+      "100": "#FEEACC",
+      "200": "#FAD49B",
+      "300": "#F0B758",
+      "400": "#D99807",
+      "500": "#B88000",
+      "600": "#986900",
+      "700": "#7A5400",
+      "800": "#5E4000",
+      "900": "#452E02",
+      "950": "#2C1D04"
+    },
+    "danger": {
+      "descripcion": "Peligro. Rojo carmin (15 grados) en vez de rojo puro (29): 23 grados mas frio que el naranja; en UI se usa desde 700 (mas oscuro que la accion naranja, 600).",
+      "hue": 15,
+      "50": "#FFF4F4",
+      "100": "#FFE6E7",
+      "200": "#FFCCCE",
+      "300": "#FFA6AD",
+      "400": "#FC7584",
+      "500": "#EC4764",
+      "600": "#C92E4E",
+      "700": "#A4223D",
+      "800": "#7F192E",
+      "900": "#5D1321",
+      "950": "#3D0C15"
+    },
+    "white": "#FFFFFF",
+    "black": "#000000"
+  }
+}

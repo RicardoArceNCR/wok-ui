@@ -1,0 +1,200 @@
+{
+  "id": "VariableCollectionId:7:0",
+  "name": "opacity",
+  "modes": {
+    "7:0": "Mode 1"
+  },
+  "variableIds": [
+    "VariableID:7:1",
+    "VariableID:7:2",
+    "VariableID:7:3",
+    "VariableID:7:4",
+    "VariableID:7:5",
+    "VariableID:7:6",
+    "VariableID:7:7",
+    "VariableID:7:8",
+    "VariableID:7:9"
+  ],
+  "variables": [
+    {
+      "id": "VariableID:7:1",
+      "name": "opacity/ghost",
+      "description": "4%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.04
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.04,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:2",
+      "name": "opacity/hairline",
+      "description": "8%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.08
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.08,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:3",
+      "name": "opacity/subtle",
+      "description": "16%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.16
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.16,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:4",
+      "name": "opacity/mid",
+      "description": "42%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.42
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.42,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:5",
+      "name": "opacity/soft",
+      "description": "50%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.5
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.5,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:6",
+      "name": "opacity/medium",
+      "description": "60%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.6
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.6,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:7",
+      "name": "opacity/strong",
+      "description": "72%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.72
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.72,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:8",
+      "name": "opacity/high",
+      "description": "80%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 0.8
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 0.8,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:7:9",
+      "name": "opacity/full",
+      "description": "100%",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "7:0": 1
+      },
+      "resolvedValuesByMode": {
+        "7:0": {
+          "resolvedValue": 1,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    }
+  ]
+}

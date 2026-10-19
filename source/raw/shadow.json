@@ -1,0 +1,137 @@
+{
+  "id": "VariableCollectionId:11:0",
+  "name": "shadow",
+  "modes": {
+    "11:0": "Mode 1"
+  },
+  "variableIds": [
+    "VariableID:11:1",
+    "VariableID:11:2",
+    "VariableID:11:3",
+    "VariableID:11:4",
+    "VariableID:11:5",
+    "VariableID:11:6"
+  ],
+  "variables": [
+    {
+      "id": "VariableID:11:1",
+      "name": "sm",
+      "description": "",
+      "type": "STRING",
+      "valuesByMode": {
+        "11:0": "0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10)"
+      },
+      "resolvedValuesByMode": {
+        "11:0": {
+          "resolvedValue": "0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:11:2",
+      "name": "md",
+      "description": "",
+      "type": "STRING",
+      "valuesByMode": {
+        "11:0": "0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.10)"
+      },
+      "resolvedValuesByMode": {
+        "11:0": {
+          "resolvedValue": "0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.10)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:11:3",
+      "name": "lg",
+      "description": "",
+      "type": "STRING",
+      "valuesByMode": {
+        "11:0": "0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px -4px rgba(0, 0, 0, 0.10)"
+      },
+      "resolvedValuesByMode": {
+        "11:0": {
+          "resolvedValue": "0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px -4px rgba(0, 0, 0, 0.10)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:11:4",
+      "name": "sm-dark",
+      "description": "",
+      "type": "STRING",
+      "valuesByMode": {
+        "11:0": "0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px rgba(0, 0, 0, 0.40)"
+      },
+      "resolvedValuesByMode": {
+        "11:0": {
+          "resolvedValue": "0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px rgba(0, 0, 0, 0.40)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:11:5",
+      "name": "md-dark",
+      "description": "",
+      "type": "STRING",
+      "valuesByMode": {
+        "11:0": "0px 4px 6px -1px rgba(0, 0, 0, 0.40), 0px 2px 4px -2px rgba(0, 0, 0, 0.40)"
+      },
+      "resolvedValuesByMode": {
+        "11:0": {
+          "resolvedValue": "0px 4px 6px -1px rgba(0, 0, 0, 0.40), 0px 2px 4px -2px rgba(0, 0, 0, 0.40)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:11:6",
+      "name": "lg-dark",
+      "description": "",
+      "type": "STRING",
+      "valuesByMode": {
+        "11:0": "0px 10px 15px -3px rgba(0, 0, 0, 0.45), 0px 4px 6px -4px rgba(0, 0, 0, 0.45)"
+      },
+      "resolvedValuesByMode": {
+        "11:0": {
+          "resolvedValue": "0px 10px 15px -3px rgba(0, 0, 0, 0.45), 0px 4px 6px -4px rgba(0, 0, 0, 0.45)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    }
+  ]
+}

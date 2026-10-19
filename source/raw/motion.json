@@ -1,0 +1,200 @@
+{
+  "id": "VariableCollectionId:6:0",
+  "name": "motion",
+  "modes": {
+    "6:0": "Mode 1"
+  },
+  "variableIds": [
+    "VariableID:6:1",
+    "VariableID:6:2",
+    "VariableID:6:3",
+    "VariableID:6:4",
+    "VariableID:6:5",
+    "VariableID:6:6",
+    "VariableID:6:7",
+    "VariableID:6:8",
+    "VariableID:6:9"
+  ],
+  "variables": [
+    {
+      "id": "VariableID:6:1",
+      "name": "motion/duration/instant",
+      "description": "Feedback inmediato",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "6:0": 50
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": 50,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:2",
+      "name": "motion/duration/fast",
+      "description": "Microinteracciones",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "6:0": 100
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": 100,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:3",
+      "name": "motion/duration/normal",
+      "description": "Transiciones de interfaz",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "6:0": 150
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": 150,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:4",
+      "name": "motion/duration/slow",
+      "description": "Modales y paneles",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "6:0": 250
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": 250,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:5",
+      "name": "motion/duration/slower",
+      "description": "Entradas grandes",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "6:0": 400
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": 400,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:6",
+      "name": "motion/easing/standard",
+      "description": "Movimiento general",
+      "type": "STRING",
+      "valuesByMode": {
+        "6:0": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": "cubic-bezier(0.4, 0, 0.2, 1)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:7",
+      "name": "motion/easing/enter",
+      "description": "Elementos que entran",
+      "type": "STRING",
+      "valuesByMode": {
+        "6:0": "cubic-bezier(0, 0, 0.2, 1)"
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": "cubic-bezier(0, 0, 0.2, 1)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:8",
+      "name": "motion/easing/exit",
+      "description": "Elementos que salen",
+      "type": "STRING",
+      "valuesByMode": {
+        "6:0": "cubic-bezier(0.4, 0, 1, 1)"
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": "cubic-bezier(0.4, 0, 1, 1)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:6:9",
+      "name": "motion/easing/spring",
+      "description": "Rebote sutil",
+      "type": "STRING",
+      "valuesByMode": {
+        "6:0": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+      },
+      "resolvedValuesByMode": {
+        "6:0": {
+          "resolvedValue": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    }
+  ]
+}

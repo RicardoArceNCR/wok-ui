@@ -1,0 +1,116 @@
+{
+  "id": "VariableCollectionId:8:0",
+  "name": "breakpoints",
+  "modes": {
+    "8:0": "Mode 1"
+  },
+  "variableIds": [
+    "VariableID:8:1",
+    "VariableID:8:2",
+    "VariableID:8:3",
+    "VariableID:8:4",
+    "VariableID:8:5"
+  ],
+  "variables": [
+    {
+      "id": "VariableID:8:1",
+      "name": "breakpoint/sm",
+      "description": "640px",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "8:0": 640
+      },
+      "resolvedValuesByMode": {
+        "8:0": {
+          "resolvedValue": 640,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:8:2",
+      "name": "breakpoint/md",
+      "description": "768px",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "8:0": 768
+      },
+      "resolvedValuesByMode": {
+        "8:0": {
+          "resolvedValue": 768,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:8:3",
+      "name": "breakpoint/lg",
+      "description": "1024px",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "8:0": 1024
+      },
+      "resolvedValuesByMode": {
+        "8:0": {
+          "resolvedValue": 1024,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:8:4",
+      "name": "breakpoint/xl",
+      "description": "1280px",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "8:0": 1280
+      },
+      "resolvedValuesByMode": {
+        "8:0": {
+          "resolvedValue": 1280,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:8:5",
+      "name": "breakpoint/2xl",
+      "description": "1536px",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "8:0": 1536
+      },
+      "resolvedValuesByMode": {
+        "8:0": {
+          "resolvedValue": 1536,
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    }
+  ]
+}
