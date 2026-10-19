@@ -31,7 +31,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -51,7 +51,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -71,7 +71,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -91,7 +91,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -111,7 +111,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -131,7 +131,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -151,7 +151,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -171,7 +171,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -191,7 +191,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "OPACITY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}

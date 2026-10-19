@@ -792,7 +792,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -816,7 +816,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -840,7 +840,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -864,7 +864,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -888,7 +888,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -912,7 +912,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -936,7 +936,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "CORNER_RADIUS"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -960,7 +960,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_WEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -983,9 +983,7 @@
           "aliasName": "typography/tracking/caps"
         }
       },
-      "scopes": [
-        "ALL_SCOPES"
-      ],
+      "scopes": [],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     },
@@ -1142,19 +1140,19 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:38"
+          "id": "VariableID:2:43"
         }
       },
       "resolvedValuesByMode": {
         "3:0": {
           "resolvedValue": {
-            "r": 0.8313725490196079,
-            "g": 0.2627450980392157,
-            "b": 0.01568627450980392,
+            "r": 0.08235294117647059,
+            "g": 0.3803921568627451,
+            "b": 0.5843137254901961,
             "a": 1
           },
-          "alias": "VariableID:2:38",
-          "aliasName": "brand/action"
+          "alias": "VariableID:2:43",
+          "aliasName": "focus/ring-color"
         }
       },
       "scopes": [
@@ -1171,7 +1169,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:66"
+          "id": "VariableID:2:70"
         }
       },
       "resolvedValuesByMode": {
@@ -1182,7 +1180,7 @@
             "b": 0.3058823529411765,
             "a": 1
           },
-          "alias": "VariableID:2:66",
+          "alias": "VariableID:2:70",
           "aliasName": "feedback/error/icon"
         }
       },
@@ -1200,7 +1198,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:58"
+          "id": "VariableID:2:62"
         }
       },
       "resolvedValuesByMode": {
@@ -1211,7 +1209,7 @@
             "b": 0.29411764705882354,
             "a": 1
           },
-          "alias": "VariableID:2:58",
+          "alias": "VariableID:2:62",
           "aliasName": "feedback/success/icon"
         }
       },
@@ -1322,9 +1320,9 @@
       "resolvedValuesByMode": {
         "3:0": {
           "resolvedValue": {
-            "r": 0.4196078431372549,
-            "g": 0.4117647058823529,
-            "b": 0.39215686274509803,
+            "r": 0.3333333333333333,
+            "g": 0.3215686274509804,
+            "b": 0.3058823529411765,
             "a": 1
           },
           "alias": "VariableID:2:20",
@@ -1351,9 +1349,9 @@
       "resolvedValuesByMode": {
         "3:0": {
           "resolvedValue": {
-            "r": 0.3333333333333333,
-            "g": 0.3215686274509804,
-            "b": 0.3058823529411765,
+            "r": 0.24705882352941178,
+            "g": 0.23921568627450981,
+            "b": 0.2235294117647059,
             "a": 1
           },
           "alias": "VariableID:2:19",
@@ -1385,7 +1383,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "CORNER_RADIUS"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1409,7 +1407,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1433,7 +1431,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1602,7 +1600,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "CORNER_RADIUS"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1626,7 +1624,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1649,9 +1647,7 @@
           "aliasName": "sm"
         }
       },
-      "scopes": [
-        "ALL_SCOPES"
-      ],
+      "scopes": [],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     },
@@ -1819,7 +1815,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1919,7 +1915,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:50"
+          "id": "VariableID:2:54"
         }
       },
       "resolvedValuesByMode": {
@@ -1930,7 +1926,7 @@
             "b": 0.10980392156862745,
             "a": 0.7
           },
-          "alias": "VariableID:2:50",
+          "alias": "VariableID:2:54",
           "aliasName": "overlay/modal"
         }
       },
@@ -1959,7 +1955,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "CORNER_RADIUS"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1982,9 +1978,7 @@
           "aliasName": "lg"
         }
       },
-      "scopes": [
-        "ALL_SCOPES"
-      ],
+      "scopes": [],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     },
@@ -2031,9 +2025,9 @@
       "resolvedValuesByMode": {
         "3:0": {
           "resolvedValue": {
-            "r": 0.3333333333333333,
-            "g": 0.3215686274509804,
-            "b": 0.3058823529411765,
+            "r": 0.24705882352941178,
+            "g": 0.23921568627450981,
+            "b": 0.2235294117647059,
             "a": 1
           },
           "alias": "VariableID:2:19",
@@ -2141,7 +2135,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:55"
+          "id": "VariableID:2:59"
         }
       },
       "resolvedValuesByMode": {
@@ -2152,7 +2146,7 @@
             "b": 0.9490196078431372,
             "a": 1
           },
-          "alias": "VariableID:2:55",
+          "alias": "VariableID:2:59",
           "aliasName": "feedback/success/bg"
         }
       },
@@ -2170,7 +2164,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:57"
+          "id": "VariableID:2:61"
         }
       },
       "resolvedValuesByMode": {
@@ -2181,7 +2175,7 @@
             "b": 0.23529411764705882,
             "a": 1
           },
-          "alias": "VariableID:2:57",
+          "alias": "VariableID:2:61",
           "aliasName": "feedback/success/text"
         }
       },
@@ -2199,7 +2193,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:59"
+          "id": "VariableID:2:63"
         }
       },
       "resolvedValuesByMode": {
@@ -2210,7 +2204,7 @@
             "b": 0.9176470588235294,
             "a": 1
           },
-          "alias": "VariableID:2:59",
+          "alias": "VariableID:2:63",
           "aliasName": "feedback/warning/bg"
         }
       },
@@ -2228,7 +2222,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:61"
+          "id": "VariableID:2:65"
         }
       },
       "resolvedValuesByMode": {
@@ -2239,7 +2233,7 @@
             "b": 0.0,
             "a": 1
           },
-          "alias": "VariableID:2:61",
+          "alias": "VariableID:2:65",
           "aliasName": "feedback/warning/text"
         }
       },
@@ -2257,7 +2251,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:63"
+          "id": "VariableID:2:67"
         }
       },
       "resolvedValuesByMode": {
@@ -2268,7 +2262,7 @@
             "b": 0.9568627450980393,
             "a": 1
           },
-          "alias": "VariableID:2:63",
+          "alias": "VariableID:2:67",
           "aliasName": "feedback/error/bg"
         }
       },
@@ -2286,7 +2280,7 @@
       "valuesByMode": {
         "3:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:2:65"
+          "id": "VariableID:2:69"
         }
       },
       "resolvedValuesByMode": {
@@ -2297,7 +2291,7 @@
             "b": 0.23921568627450981,
             "a": 1
           },
-          "alias": "VariableID:2:65",
+          "alias": "VariableID:2:69",
           "aliasName": "feedback/error/text"
         }
       },
@@ -2326,7 +2320,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "CORNER_RADIUS"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -2350,7 +2344,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -2374,7 +2368,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -2485,7 +2479,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "CORNER_RADIUS"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -2508,9 +2502,7 @@
           "aliasName": "md"
         }
       },
-      "scopes": [
-        "ALL_SCOPES"
-      ],
+      "scopes": [],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     },
@@ -2591,7 +2583,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "CORNER_RADIUS"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -2614,9 +2606,7 @@
           "aliasName": "sm"
         }
       },
-      "scopes": [
-        "ALL_SCOPES"
-      ],
+      "scopes": [],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     },
@@ -2726,7 +2716,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -2750,7 +2740,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -2774,7 +2764,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}

@@ -78,11 +78,11 @@
     },
     "secondary": {
       "$type": "color",
-      "$value": "{color.neutral.700}"
+      "$value": "{color.neutral.800}"
     },
     "tertiary": {
       "$type": "color",
-      "$value": "{color.neutral.600}"
+      "$value": "{color.neutral.700}"
     },
     "disabled": {
       "$type": "color",
@@ -178,11 +178,11 @@
     },
     "font-display": {
       "$type": "string",
-      "$value": "var(--font-display, \"Gang of Three\", \"WokDisplayFallback\", Arial, Helvetica, sans-serif)"
+      "$value": "Gang of Three"
     },
     "font-body": {
       "$type": "string",
-      "$value": "var(--font-body, Lato, system-ui, -apple-system, \"Segoe UI\", Helvetica, Arial, sans-serif)"
+      "$value": "Lato"
     },
     "font-mono": {
       "$type": "string",
@@ -192,11 +192,27 @@
   "focus": {
     "ring-color": {
       "$type": "color",
-      "$value": "{color.info.600}"
+      "$value": "{color.info.700}"
     },
     "ring-offset": {
       "$type": "color",
       "$value": "{color.white}"
+    },
+    "ring-on-ink": {
+      "$type": "color",
+      "$value": "{color.info.300}"
+    },
+    "ring-on-support": {
+      "$type": "color",
+      "$value": "{color.brand.950}"
+    },
+    "ring-on-inverse": {
+      "$type": "color",
+      "$value": "{color.info.300}"
+    },
+    "ring-on-highlight": {
+      "$type": "color",
+      "$value": "{color.brand.950}"
     }
   },
   "interaction": {

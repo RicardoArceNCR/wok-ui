@@ -185,6 +185,22 @@
     "ring-offset": {
       "$type": "color",
       "$value": "{color.brand.900}"
+    },
+    "ring-on-ink": {
+      "$type": "color",
+      "$value": "{color.info.300}"
+    },
+    "ring-on-support": {
+      "$type": "color",
+      "$value": "{color.brand.950}"
+    },
+    "ring-on-inverse": {
+      "$type": "color",
+      "$value": "{color.info.700}"
+    },
+    "ring-on-highlight": {
+      "$type": "color",
+      "$value": "{color.brand.950}"
     }
   },
   "interaction": {

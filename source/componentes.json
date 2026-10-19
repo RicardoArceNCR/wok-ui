@@ -170,7 +170,7 @@
     },
     "border-focus": {
       "$type": "color",
-      "$value": "{brand.action}"
+      "$value": "{focus.ring-color}"
     },
     "border-error": {
       "$type": "color",

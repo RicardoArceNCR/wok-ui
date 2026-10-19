@@ -17,10 +17,16 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { pairs } = JSON.parse(readFileSync(path.join(root, "scripts/contrast-pairs.json"), "utf8"));
 
-// WOK arranca sin excepciones: los pares de contrast-pairs.json pasan AA en
-// los dos temas. Una entrada nueva lleva motivo y el ratio medido en un
-// comentario, y se borra cuando el arreglo llega desde Figma.
-const ALLOW = [];
+// Única vía para que un par en falla pase: motivo escrito y el ratio medido
+// en un comentario. Se borra la línea cuando el arreglo llega desde Figma.
+// contrast-pairs.json no tiene pares con mínimo 0: todo par se mide y, si
+// falla, está acá a la vista (y se cuenta en cada corrida).
+const ALLOW = [
+  {
+    theme: "oscuro", fg: "brand-action", bg: "surface-base",
+    why: "Contorno del botón primario sobre una superficie bosque-800. WCAG 1.4.11 no exige el contorno cuando la etiqueta identifica el control (blanco sobre accent-600, 4.56:1), y la acción es el mismo naranja en los dos temas. Sobre la página oscura da 3.04 y pasa.",
+  }, // 2.39:1, mínimo 3
+];
 
 function decls(file) {
   const css = readFileSync(path.join(root, file), "utf8");

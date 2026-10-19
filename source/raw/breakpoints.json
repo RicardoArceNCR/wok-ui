@@ -27,7 +27,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -47,7 +47,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -67,7 +67,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -87,7 +87,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -107,7 +107,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}

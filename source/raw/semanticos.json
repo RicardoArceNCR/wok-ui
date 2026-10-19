@@ -77,13 +77,17 @@
     "VariableID:2:70",
     "VariableID:2:71",
     "VariableID:2:72",
-    "VariableID:2:73"
+    "VariableID:2:73",
+    "VariableID:2:74",
+    "VariableID:2:75",
+    "VariableID:2:76",
+    "VariableID:2:77"
   ],
   "variables": [
     {
       "id": "VariableID:2:1",
       "name": "background/page",
-      "description": "",
+      "description": "Fondo de página",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -112,7 +116,7 @@
     {
       "id": "VariableID:2:2",
       "name": "background/base",
-      "description": "",
+      "description": "Fondo de secciones a sangre",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -141,7 +145,7 @@
     {
       "id": "VariableID:2:3",
       "name": "background/subtle",
-      "description": "",
+      "description": "Fondo de bandas suaves y hover de botones",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -170,7 +174,7 @@
     {
       "id": "VariableID:2:4",
       "name": "background/strong",
-      "description": "",
+      "description": "Fondo marcado: botón deshabilitado, press",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -199,7 +203,7 @@
     {
       "id": "VariableID:2:5",
       "name": "surface/base",
-      "description": "",
+      "description": "Superficie de controles: campos y botón secundario",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -228,7 +232,7 @@
     {
       "id": "VariableID:2:6",
       "name": "surface/raised",
-      "description": "",
+      "description": "Superficie elevada: tarjetas, modales, toasts",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -257,7 +261,7 @@
     {
       "id": "VariableID:2:7",
       "name": "surface/container",
-      "description": "",
+      "description": "Contenedor agrupador sobre la página",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -286,7 +290,7 @@
     {
       "id": "VariableID:2:8",
       "name": "surface/subtle",
-      "description": "",
+      "description": "Hover de tarjeta",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -315,7 +319,7 @@
     {
       "id": "VariableID:2:9",
       "name": "surface/inverse",
-      "description": "",
+      "description": "Superficie invertida: tooltip, bloque de contraste",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -344,7 +348,7 @@
     {
       "id": "VariableID:2:10",
       "name": "surface/inverse-subtle",
-      "description": "color/paper/50 al 10%",
+      "description": "Velo sobre surface/inverse (color/paper/50 al 10%)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -374,7 +378,7 @@
     {
       "id": "VariableID:2:11",
       "name": "surface/accent-bg",
-      "description": "",
+      "description": "Bloque destacado oscuro",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -403,7 +407,7 @@
     {
       "id": "VariableID:2:12",
       "name": "surface/accent-text",
-      "description": "",
+      "description": "Texto sobre surface/accent-bg",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -432,7 +436,7 @@
     {
       "id": "VariableID:2:13",
       "name": "surface/accent-border",
-      "description": "",
+      "description": "Borde sobre surface/accent-bg y surface/ink",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -461,7 +465,7 @@
     {
       "id": "VariableID:2:14",
       "name": "surface/ink",
-      "description": "Superficie del material de marca: Verde Bosque (brand-900) en los dos temas",
+      "description": "Material de marca: Verde Bosque en los dos temas",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -490,7 +494,7 @@
     {
       "id": "VariableID:2:15",
       "name": "surface/support",
-      "description": "Franja de apoyo: Verde Lima Suave (support-400)",
+      "description": "Franja de apoyo lima",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -519,7 +523,7 @@
     {
       "id": "VariableID:2:16",
       "name": "surface/highlight-bg",
-      "description": "",
+      "description": "Fondo naranja de bandas promocionales; texto solo display ≥24px",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -548,7 +552,7 @@
     {
       "id": "VariableID:2:17",
       "name": "surface/highlight-text",
-      "description": "",
+      "description": "Texto sobre surface/highlight-bg",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -577,7 +581,7 @@
     {
       "id": "VariableID:2:18",
       "name": "text/primary",
-      "description": "",
+      "description": "Texto principal y titulares",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -606,7 +610,36 @@
     {
       "id": "VariableID:2:19",
       "name": "text/secondary",
-      "description": "",
+      "description": "Texto secundario y etiquetas",
+      "type": "COLOR",
+      "valuesByMode": {
+        "2:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:1:9"
+        }
+      },
+      "resolvedValuesByMode": {
+        "2:0": {
+          "resolvedValue": {
+            "r": 0.24705882352941178,
+            "g": 0.23921568627450981,
+            "b": 0.2235294117647059,
+            "a": 1
+          },
+          "alias": "VariableID:1:9",
+          "aliasName": "color/neutral/800"
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:2:20",
+      "name": "text/tertiary",
+      "description": "Texto terciario, ayudas y placeholder",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -633,38 +666,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:20",
-      "name": "text/tertiary",
-      "description": "",
-      "type": "COLOR",
-      "valuesByMode": {
-        "2:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:1:7"
-        }
-      },
-      "resolvedValuesByMode": {
-        "2:0": {
-          "resolvedValue": {
-            "r": 0.4196078431372549,
-            "g": 0.4117647058823529,
-            "b": 0.39215686274509803,
-            "a": 1
-          },
-          "alias": "VariableID:1:7",
-          "aliasName": "color/neutral/600"
-        }
-      },
-      "scopes": [
-        "ALL_SCOPES"
-      ],
-      "hiddenFromPublishing": false,
-      "codeSyntax": {}
-    },
-    {
       "id": "VariableID:2:21",
       "name": "text/disabled",
-      "description": "",
+      "description": "Texto deshabilitado (sin requisito de contraste)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -693,7 +697,7 @@
     {
       "id": "VariableID:2:22",
       "name": "text/inverse",
-      "description": "",
+      "description": "Texto sobre surface/inverse",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -722,7 +726,7 @@
     {
       "id": "VariableID:2:23",
       "name": "text/inverse-secondary",
-      "description": "color/paper/50 al 78%",
+      "description": "Texto secundario sobre surface/inverse (color/paper/50 al 78%)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -752,7 +756,7 @@
     {
       "id": "VariableID:2:24",
       "name": "text/brand",
-      "description": "",
+      "description": "Texto de marca en naranja apto para cuerpo",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -781,7 +785,7 @@
     {
       "id": "VariableID:2:25",
       "name": "text/brand-accent",
-      "description": "",
+      "description": "Texto de apoyo verde: antetítulos",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -810,7 +814,7 @@
     {
       "id": "VariableID:2:26",
       "name": "text/on-brand",
-      "description": "",
+      "description": "Texto sobre brand/action y botón peligroso",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -839,7 +843,7 @@
     {
       "id": "VariableID:2:27",
       "name": "text/on-ink",
-      "description": "Texto sobre surface/ink: marfil sobre bosque",
+      "description": "Texto sobre surface/ink",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -868,7 +872,7 @@
     {
       "id": "VariableID:2:28",
       "name": "text/on-support",
-      "description": "Texto sobre surface/support: bosque sobre lima",
+      "description": "Texto sobre surface/support",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -897,7 +901,7 @@
     {
       "id": "VariableID:2:29",
       "name": "border/default",
-      "description": "",
+      "description": "Borde de tarjetas y separación suave",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -926,7 +930,7 @@
     {
       "id": "VariableID:2:30",
       "name": "border/subtle",
-      "description": "",
+      "description": "Borde muy suave, deshabilitado",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -955,7 +959,7 @@
     {
       "id": "VariableID:2:31",
       "name": "border/strong",
-      "description": "",
+      "description": "Borde de campos y controles (≥3:1)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -984,7 +988,7 @@
     {
       "id": "VariableID:2:32",
       "name": "border/brand",
-      "description": "",
+      "description": "Borde de marca, hover de campo",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1013,7 +1017,7 @@
     {
       "id": "VariableID:2:33",
       "name": "border/inverse",
-      "description": "",
+      "description": "Borde sobre surface/inverse",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1042,7 +1046,7 @@
     {
       "id": "VariableID:2:34",
       "name": "border/inverse-subtle",
-      "description": "color/paper/50 al 24%",
+      "description": "Borde suave sobre surface/inverse (color/paper/50 al 24%)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1072,7 +1076,7 @@
     {
       "id": "VariableID:2:35",
       "name": "brand/main",
-      "description": "",
+      "description": "Color principal de marca: Verde Bosque",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1101,7 +1105,7 @@
     {
       "id": "VariableID:2:36",
       "name": "brand/subtle",
-      "description": "",
+      "description": "Fondo suave de marca: etiqueta y avatar",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1130,7 +1134,7 @@
     {
       "id": "VariableID:2:37",
       "name": "brand/strong",
-      "description": "",
+      "description": "Texto sobre brand/subtle",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1159,7 +1163,7 @@
     {
       "id": "VariableID:2:38",
       "name": "brand/action",
-      "description": "",
+      "description": "Acción principal: botón primario (accent-600)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1188,7 +1192,7 @@
     {
       "id": "VariableID:2:39",
       "name": "brand/action-hover",
-      "description": "",
+      "description": "Hover de la acción principal",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1217,7 +1221,7 @@
     {
       "id": "VariableID:2:40",
       "name": "brand/action-press",
-      "description": "",
+      "description": "Press de la acción principal",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1246,7 +1250,7 @@
     {
       "id": "VariableID:2:41",
       "name": "brand/accent",
-      "description": "",
+      "description": "Naranja de manual: ilustración y display sobre bosque, nunca texto sobre marfil",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1275,7 +1279,7 @@
     {
       "id": "VariableID:2:42",
       "name": "brand/support",
-      "description": "",
+      "description": "Lima de marca: detalles sobre bosque",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1304,24 +1308,24 @@
     {
       "id": "VariableID:2:43",
       "name": "focus/ring-color",
-      "description": "",
+      "description": "Anillo de foco sobre página y superficies del tema",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:1:73"
+          "id": "VariableID:1:74"
         }
       },
       "resolvedValuesByMode": {
         "2:0": {
           "resolvedValue": {
-            "r": 0.12941176470588237,
-            "g": 0.4745098039215686,
-            "b": 0.7176470588235294,
+            "r": 0.08235294117647059,
+            "g": 0.3803921568627451,
+            "b": 0.5843137254901961,
             "a": 1
           },
-          "alias": "VariableID:1:73",
-          "aliasName": "color/info/600"
+          "alias": "VariableID:1:74",
+          "aliasName": "color/info/700"
         }
       },
       "scopes": [
@@ -1333,7 +1337,7 @@
     {
       "id": "VariableID:2:44",
       "name": "focus/ring-offset",
-      "description": "",
+      "description": "Separación entre el control y el anillo",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1361,25 +1365,25 @@
     },
     {
       "id": "VariableID:2:45",
-      "name": "interaction/hover-overlay",
-      "description": "",
+      "name": "focus/ring-on-ink",
+      "description": "Anillo de foco sobre surface/ink, nav y surface/accent-bg",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
           "type": "VARIABLE_ALIAS",
-          "id": "VariableID:1:33"
+          "id": "VariableID:1:70"
         }
       },
       "resolvedValuesByMode": {
         "2:0": {
           "resolvedValue": {
-            "r": 0.06666666666666667,
-            "g": 0.13333333333333333,
-            "b": 0.10980392156862745,
+            "r": 0.592156862745098,
+            "g": 0.788235294117647,
+            "b": 0.9529411764705882,
             "a": 1
           },
-          "alias": "VariableID:1:33",
-          "aliasName": "color/brand/950"
+          "alias": "VariableID:1:70",
+          "aliasName": "color/info/300"
         }
       },
       "scopes": [
@@ -1390,8 +1394,8 @@
     },
     {
       "id": "VariableID:2:46",
-      "name": "interaction/active-overlay",
-      "description": "",
+      "name": "focus/ring-on-support",
+      "description": "Anillo de foco sobre surface/support",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1419,8 +1423,124 @@
     },
     {
       "id": "VariableID:2:47",
+      "name": "focus/ring-on-inverse",
+      "description": "Anillo de foco sobre surface/inverse",
+      "type": "COLOR",
+      "valuesByMode": {
+        "2:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:1:70"
+        }
+      },
+      "resolvedValuesByMode": {
+        "2:0": {
+          "resolvedValue": {
+            "r": 0.592156862745098,
+            "g": 0.788235294117647,
+            "b": 0.9529411764705882,
+            "a": 1
+          },
+          "alias": "VariableID:1:70",
+          "aliasName": "color/info/300"
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:2:48",
+      "name": "focus/ring-on-highlight",
+      "description": "Anillo de foco sobre surface/highlight-bg",
+      "type": "COLOR",
+      "valuesByMode": {
+        "2:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:1:33"
+        }
+      },
+      "resolvedValuesByMode": {
+        "2:0": {
+          "resolvedValue": {
+            "r": 0.06666666666666667,
+            "g": 0.13333333333333333,
+            "b": 0.10980392156862745,
+            "a": 1
+          },
+          "alias": "VariableID:1:33",
+          "aliasName": "color/brand/950"
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:2:49",
+      "name": "interaction/hover-overlay",
+      "description": "Velo de hover (con opacity/*)",
+      "type": "COLOR",
+      "valuesByMode": {
+        "2:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:1:33"
+        }
+      },
+      "resolvedValuesByMode": {
+        "2:0": {
+          "resolvedValue": {
+            "r": 0.06666666666666667,
+            "g": 0.13333333333333333,
+            "b": 0.10980392156862745,
+            "a": 1
+          },
+          "alias": "VariableID:1:33",
+          "aliasName": "color/brand/950"
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:2:50",
+      "name": "interaction/active-overlay",
+      "description": "Velo de press (con opacity/*)",
+      "type": "COLOR",
+      "valuesByMode": {
+        "2:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:1:33"
+        }
+      },
+      "resolvedValuesByMode": {
+        "2:0": {
+          "resolvedValue": {
+            "r": 0.06666666666666667,
+            "g": 0.13333333333333333,
+            "b": 0.10980392156862745,
+            "a": 1
+          },
+          "alias": "VariableID:1:33",
+          "aliasName": "color/brand/950"
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:2:51",
       "name": "interaction/link/default",
-      "description": "",
+      "description": "Enlace",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1447,9 +1567,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:48",
+      "id": "VariableID:2:52",
       "name": "interaction/link/hover",
-      "description": "",
+      "description": "Enlace en hover",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1476,9 +1596,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:49",
+      "id": "VariableID:2:53",
       "name": "interaction/link/visited",
-      "description": "",
+      "description": "Enlace visitado",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1505,9 +1625,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:50",
+      "id": "VariableID:2:54",
       "name": "overlay/modal",
-      "description": "color/brand/950 al 70%",
+      "description": "Velo detrás de un modal (color/brand/950 al 70%)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1535,9 +1655,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:51",
+      "id": "VariableID:2:55",
       "name": "overlay/card",
-      "description": "color/brand/950 al 24%",
+      "description": "Velo sobre imagen de tarjeta (color/brand/950 al 24%)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1565,9 +1685,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:52",
+      "id": "VariableID:2:56",
       "name": "overlay/hero",
-      "description": "color/brand/950 al 62%",
+      "description": "Velo sobre imagen de portada para texto encima (color/brand/950 al 62%)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1595,9 +1715,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:53",
+      "id": "VariableID:2:57",
       "name": "divider/default",
-      "description": "",
+      "description": "Separador",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1624,9 +1744,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:54",
+      "id": "VariableID:2:58",
       "name": "divider/strong",
-      "description": "",
+      "description": "Separador marcado",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1653,9 +1773,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:55",
+      "id": "VariableID:2:59",
       "name": "feedback/success/bg",
-      "description": "",
+      "description": "Fondo de mensaje de éxito",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1682,9 +1802,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:56",
+      "id": "VariableID:2:60",
       "name": "feedback/success/border",
-      "description": "",
+      "description": "Borde de mensaje de éxito",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1711,9 +1831,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:57",
+      "id": "VariableID:2:61",
       "name": "feedback/success/text",
-      "description": "",
+      "description": "Texto de mensaje de éxito",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1740,9 +1860,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:58",
+      "id": "VariableID:2:62",
       "name": "feedback/success/icon",
-      "description": "",
+      "description": "Ícono de éxito (siempre con texto)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1769,9 +1889,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:59",
+      "id": "VariableID:2:63",
       "name": "feedback/warning/bg",
-      "description": "",
+      "description": "Fondo de mensaje de aviso",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1798,9 +1918,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:60",
+      "id": "VariableID:2:64",
       "name": "feedback/warning/border",
-      "description": "",
+      "description": "Borde de mensaje de aviso",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1827,9 +1947,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:61",
+      "id": "VariableID:2:65",
       "name": "feedback/warning/text",
-      "description": "",
+      "description": "Texto de mensaje de aviso",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1856,9 +1976,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:62",
+      "id": "VariableID:2:66",
       "name": "feedback/warning/icon",
-      "description": "",
+      "description": "Ícono de aviso (siempre con texto)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1885,9 +2005,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:63",
+      "id": "VariableID:2:67",
       "name": "feedback/error/bg",
-      "description": "",
+      "description": "Fondo de mensaje de error",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1914,9 +2034,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:64",
+      "id": "VariableID:2:68",
       "name": "feedback/error/border",
-      "description": "",
+      "description": "Borde de mensaje de error",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1943,9 +2063,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:65",
+      "id": "VariableID:2:69",
       "name": "feedback/error/text",
-      "description": "",
+      "description": "Texto de mensaje de error",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -1972,9 +2092,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:66",
+      "id": "VariableID:2:70",
       "name": "feedback/error/icon",
-      "description": "",
+      "description": "Ícono de error (siempre con texto)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -2001,9 +2121,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:67",
+      "id": "VariableID:2:71",
       "name": "feedback/info/bg",
-      "description": "",
+      "description": "Fondo de mensaje de información",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -2030,9 +2150,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:68",
+      "id": "VariableID:2:72",
       "name": "feedback/info/border",
-      "description": "",
+      "description": "Borde de mensaje de información",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -2059,9 +2179,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:69",
+      "id": "VariableID:2:73",
       "name": "feedback/info/text",
-      "description": "",
+      "description": "Texto de mensaje de información",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -2088,9 +2208,9 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:70",
+      "id": "VariableID:2:74",
       "name": "feedback/info/icon",
-      "description": "",
+      "description": "Ícono de información (siempre con texto)",
       "type": "COLOR",
       "valuesByMode": {
         "2:0": {
@@ -2117,47 +2237,47 @@
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:71",
+      "id": "VariableID:2:75",
       "name": "brand/font-display",
       "description": "Display: Gang of Three (provisoria, licencia pendiente). Unicase: titulares en mayúsculas",
       "type": "STRING",
       "valuesByMode": {
-        "2:0": "var(--font-display, \"Gang of Three\", \"WokDisplayFallback\", Arial, Helvetica, sans-serif)"
+        "2:0": "Gang of Three"
       },
       "resolvedValuesByMode": {
         "2:0": {
-          "resolvedValue": "var(--font-display, \"Gang of Three\", \"WokDisplayFallback\", Arial, Helvetica, sans-serif)",
+          "resolvedValue": "Gang of Three",
           "alias": null
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_FAMILY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:72",
+      "id": "VariableID:2:76",
       "name": "brand/font-body",
-      "description": "Cuerpo: Lato (OFL), servida por el sitio como \"WOK Sans\"",
+      "description": "Cuerpo: Lato (OFL). El sitio la sirve renombrada \"WOK Sans\"",
       "type": "STRING",
       "valuesByMode": {
-        "2:0": "var(--font-body, Lato, system-ui, -apple-system, \"Segoe UI\", Helvetica, Arial, sans-serif)"
+        "2:0": "Lato"
       },
       "resolvedValuesByMode": {
         "2:0": {
-          "resolvedValue": "var(--font-body, Lato, system-ui, -apple-system, \"Segoe UI\", Helvetica, Arial, sans-serif)",
+          "resolvedValue": "Lato",
           "alias": null
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_FAMILY"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     },
     {
-      "id": "VariableID:2:73",
+      "id": "VariableID:2:77",
       "name": "brand/font-mono",
       "description": "Mono: la del sistema (WOK no tiene mono de marca)",
       "type": "STRING",
@@ -2170,9 +2290,7 @@
           "alias": null
         }
       },
-      "scopes": [
-        "ALL_SCOPES"
-      ],
+      "scopes": [],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
     }

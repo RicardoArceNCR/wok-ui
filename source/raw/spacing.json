@@ -35,7 +35,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -55,7 +56,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -75,7 +77,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -95,7 +98,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -115,7 +119,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -135,7 +140,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -155,7 +161,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -175,7 +182,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -195,7 +203,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -215,7 +224,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -235,7 +245,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -255,7 +266,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -275,7 +287,8 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "GAP",
+        "WIDTH_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}

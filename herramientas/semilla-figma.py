@@ -55,30 +55,154 @@ FAMILIAS = ['neutral', 'paper', 'brand', 'accent', 'support', 'success', 'info',
 STOPS = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
 # ── Ajustes sobre semanticos.json (decididos después de la propuesta) ─────────
-# surface/ink es la superficie del material de marca: Verde Bosque (brand-900)
-# en los dos temas. La franja lima que en la propuesta se llamaba surface/ink
-# pasa a surface/support, y su texto (text/on-ink) a text/on-support. Sobre la
-# nueva surface/ink el texto es marfil (paper-50, 12.10:1).
+# La copia de la propuesta no se edita: todo cambio posterior va acá, por tema,
+# con su motivo. Cada entrada nombre → ref reemplaza o agrega el semántico.
+#
+# 1. surface/ink es la superficie del material de marca: Verde Bosque
+#    (brand-900) en los dos temas, con texto marfil (12.10:1). La franja lima
+#    que en la propuesta se llamaba surface/ink pasa a surface/support, con
+#    texto bosque (7.61:1). Ver RENOMBRES.
+# 2. Foco: un anillo por tipo de superficie, todos >=3:1 contra la superficie
+#    donde se dibujan (scripts/contrast-pairs.json los mide). ring-color en
+#    claro baja a info-700: info-600 daba 3.09 sobre background/strong.
+# 3. Texto en claro un stop más oscuro: text/tertiary (neutral-600) daba 4.26
+#    sobre surface/container y background/subtle (paper-100). Queda
+#    secondary = neutral-800 y tertiary = neutral-700.
+RENOMBRES = {'surface/ink': 'surface/support', 'text/on-ink': 'text/on-support'}
+COMUNES = {
+    'surface/ink': 'color/brand/900',
+    'text/on-ink': 'color/paper/50',
+    'focus/ring-on-ink': 'color/info/300',
+    'focus/ring-on-support': 'color/brand/950',
+    'focus/ring-on-highlight': 'color/brand/950',
+}
 AJUSTES = {
-    'surface/ink':      ('color/brand/900', 'Superficie del material de marca: Verde Bosque (brand-900) en los dos temas'),
-    'text/on-ink':      ('color/paper/50', 'Texto sobre surface/ink: marfil sobre bosque'),
-    'surface/support':  ('color/support/400', 'Franja de apoyo: Verde Lima Suave (support-400)'),
-    'text/on-support':  ('color/brand/900', 'Texto sobre surface/support: bosque sobre lima'),
+    'claro': {**COMUNES,
+              'text/secondary': 'color/neutral/800',
+              'text/tertiary': 'color/neutral/700',
+              'focus/ring-color': 'color/info/700',
+              'focus/ring-on-inverse': 'color/info/300'},
+    'oscuro': {**COMUNES,
+               'focus/ring-on-inverse': 'color/info/700'},
+}
+# Dónde van los semánticos nuevos (después de cuál).
+INSERTAR_DESPUES = {
+    'focus/ring-offset': ['focus/ring-on-ink', 'focus/ring-on-support', 'focus/ring-on-inverse', 'focus/ring-on-highlight'],
 }
 
+# ── Una línea de uso por semántico (Figma la muestra como descripción) ────────
+DESCRIPCIONES = {
+    'background/page': 'Fondo de página',
+    'background/base': 'Fondo de secciones a sangre',
+    'background/subtle': 'Fondo de bandas suaves y hover de botones',
+    'background/strong': 'Fondo marcado: botón deshabilitado, press',
+    'surface/base': 'Superficie de controles: campos y botón secundario',
+    'surface/raised': 'Superficie elevada: tarjetas, modales, toasts',
+    'surface/container': 'Contenedor agrupador sobre la página',
+    'surface/subtle': 'Hover de tarjeta',
+    'surface/inverse': 'Superficie invertida: tooltip, bloque de contraste',
+    'surface/inverse-subtle': 'Velo sobre surface/inverse',
+    'surface/accent-bg': 'Bloque destacado oscuro',
+    'surface/accent-text': 'Texto sobre surface/accent-bg',
+    'surface/accent-border': 'Borde sobre surface/accent-bg y surface/ink',
+    'surface/ink': 'Material de marca: Verde Bosque en los dos temas',
+    'surface/support': 'Franja de apoyo lima',
+    'surface/highlight-bg': 'Fondo naranja de bandas promocionales; texto solo display ≥24px',
+    'surface/highlight-text': 'Texto sobre surface/highlight-bg',
+    'text/primary': 'Texto principal y titulares',
+    'text/secondary': 'Texto secundario y etiquetas',
+    'text/tertiary': 'Texto terciario, ayudas y placeholder',
+    'text/disabled': 'Texto deshabilitado (sin requisito de contraste)',
+    'text/inverse': 'Texto sobre surface/inverse',
+    'text/inverse-secondary': 'Texto secundario sobre surface/inverse',
+    'text/brand': 'Texto de marca en naranja apto para cuerpo',
+    'text/brand-accent': 'Texto de apoyo verde: antetítulos',
+    'text/on-brand': 'Texto sobre brand/action y botón peligroso',
+    'text/on-ink': 'Texto sobre surface/ink',
+    'text/on-support': 'Texto sobre surface/support',
+    'border/default': 'Borde de tarjetas y separación suave',
+    'border/subtle': 'Borde muy suave, deshabilitado',
+    'border/strong': 'Borde de campos y controles (≥3:1)',
+    'border/brand': 'Borde de marca, hover de campo',
+    'border/inverse': 'Borde sobre surface/inverse',
+    'border/inverse-subtle': 'Borde suave sobre surface/inverse',
+    'brand/main': 'Color principal de marca: Verde Bosque',
+    'brand/subtle': 'Fondo suave de marca: etiqueta y avatar',
+    'brand/strong': 'Texto sobre brand/subtle',
+    'brand/action': 'Acción principal: botón primario (accent-600)',
+    'brand/action-hover': 'Hover de la acción principal',
+    'brand/action-press': 'Press de la acción principal',
+    'brand/accent': 'Naranja de manual: ilustración y display sobre bosque, nunca texto sobre marfil',
+    'brand/support': 'Lima de marca: detalles sobre bosque',
+    'focus/ring-color': 'Anillo de foco sobre página y superficies del tema',
+    'focus/ring-offset': 'Separación entre el control y el anillo',
+    'focus/ring-on-ink': 'Anillo de foco sobre surface/ink, nav y surface/accent-bg',
+    'focus/ring-on-support': 'Anillo de foco sobre surface/support',
+    'focus/ring-on-inverse': 'Anillo de foco sobre surface/inverse',
+    'focus/ring-on-highlight': 'Anillo de foco sobre surface/highlight-bg',
+    'interaction/hover-overlay': 'Velo de hover (con opacity/*)',
+    'interaction/active-overlay': 'Velo de press (con opacity/*)',
+    'interaction/link/default': 'Enlace',
+    'interaction/link/hover': 'Enlace en hover',
+    'interaction/link/visited': 'Enlace visitado',
+    'overlay/modal': 'Velo detrás de un modal',
+    'overlay/card': 'Velo sobre imagen de tarjeta',
+    'overlay/hero': 'Velo sobre imagen de portada para texto encima',
+    'divider/default': 'Separador',
+    'divider/strong': 'Separador marcado',
+}
+for _tipo, _uso in (('success', 'éxito'), ('warning', 'aviso'), ('error', 'error'), ('info', 'información')):
+    DESCRIPCIONES[f'feedback/{_tipo}/bg'] = f'Fondo de mensaje de {_uso}'
+    DESCRIPCIONES[f'feedback/{_tipo}/border'] = f'Borde de mensaje de {_uso}'
+    DESCRIPCIONES[f'feedback/{_tipo}/text'] = f'Texto de mensaje de {_uso}'
+    DESCRIPCIONES[f'feedback/{_tipo}/icon'] = f'Ícono de {_uso} (siempre con texto)'
+
 # ── Familias tipográficas ─────────────────────────────────────────────────────
-# El valor es la pila CSS. La primera opción es la variable que publica
-# next/font en el sitio (fonts.ts: variable "--font-display" y "--font-body");
-# lo que sigue dentro del var() es el respaldo si la variable no existe (la
-# lámina, un Storybook). Las fuentes las sirve el sitio, no este paquete.
+# NOMBRES de familia, como se llaman en Figma (sirven para enlazar estilos de
+# texto). El puente a next/font va en theme-bridge.template.css. Mono es una
+# pila: WOK no tiene mono de marca y no se usa en Figma.
 FUENTES = {
-    'brand/font-display': ('var(--font-display, "Gang of Three", "WokDisplayFallback", Arial, Helvetica, sans-serif)',
+    'brand/font-display': ('Gang of Three',
                            'Display: Gang of Three (provisoria, licencia pendiente). Unicase: titulares en mayúsculas'),
-    'brand/font-body':    ('var(--font-body, Lato, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif)',
-                           'Cuerpo: Lato (OFL), servida por el sitio como "WOK Sans"'),
+    'brand/font-body':    ('Lato',
+                           'Cuerpo: Lato (OFL). El sitio la sirve renombrada "WOK Sans"'),
     'brand/font-mono':    ('ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace',
                            'Mono: la del sistema (WOK no tiene mono de marca)'),
 }
+
+# ── Scopes de Figma ───────────────────────────────────────────────────────────
+# Acotan en qué campos ofrece Figma cada variable. [] = no se ofrece en ningún
+# campo (ratios y valores que solo usa el CSS). Colores: ALL_SCOPES.
+def scopes(nombre, tipo):
+    p = nombre.split('/')
+    if tipo == 'COLOR':
+        return ['ALL_SCOPES']
+    if tipo == 'STRING':
+        return ['FONT_FAMILY'] if nombre in ('brand/font-display', 'brand/font-body') else []
+    hoja = p[-1]
+    if p[0] == 'opacity':
+        return ['OPACITY']
+    if p[0] == 'radius' or hoja == 'radius':
+        return ['CORNER_RADIUS']
+    if p[0] == 'border':
+        return ['STROKE_FLOAT']
+    if p[0] == 'spacing':
+        return ['GAP', 'WIDTH_HEIGHT']
+    if p[0] == 'breakpoint' or hoja == 'height' or (len(p) > 1 and p[-2] == 'size' and p[0] != 'typography'):
+        return ['WIDTH_HEIGHT']
+    if hoja in ('padding-x', 'padding-y', 'padding'):
+        return ['GAP']
+    if p[:2] == ['typography', 'size'] or hoja == 'size':
+        return ['FONT_SIZE']
+    if p[:2] == ['typography', 'weight'] or hoja == 'font-weight':
+        return ['FONT_WEIGHT']
+    if hoja == 'line-height':
+        return ['LINE_HEIGHT']
+    if hoja == 'letter-spacing' and p[0] == 'typography':
+        return ['LETTER_SPACING']
+    # typography/leading y tracking (ratios), button/letter-spacing (alias a un
+    # ratio), motion, z-index: los usa el CSS, no un campo de Figma.
+    return []
 
 # ── Escalas genéricas (no son de marca) ───────────────────────────────────────
 TIPO_SIZE = [('2xs', 10), ('xs', 12), ('sm', 14), ('md', 16), ('lg', 18), ('xl', 20), ('2xl', 24),
@@ -172,7 +296,7 @@ COMPONENTES = [
     ('input/bg-disabled', 'background/subtle'),
     ('input/border', 'border/strong'),
     ('input/border-hover', 'border/brand'),
-    ('input/border-focus', 'brand/action'),
+    ('input/border-focus', 'focus/ring-color'),
     ('input/border-error', 'feedback/error/icon'),
     ('input/border-success', 'feedback/success/icon'),
     ('input/border-disabled', 'border/subtle'),
@@ -263,7 +387,7 @@ class Coleccion:
             'id': vid, 'name': nombre, 'description': descripcion, 'type': tipo,
             'valuesByMode': {self.modo: vbm},
             'resolvedValuesByMode': {self.modo: res},
-            'scopes': ['ALL_SCOPES'], 'hiddenFromPublishing': False, 'codeSyntax': {},
+            'scopes': scopes(nombre, tipo), 'hiddenFromPublishing': False, 'codeSyntax': {},
         }
         self.vars.append(var)
         self.por_nombre[nombre] = var
@@ -357,29 +481,26 @@ def main():
     sem = {}
     for coleccion, tema in (('semanticos', 'claro'), ('semanticos-dark', 'oscuro')):
         c = Coleccion(coleccion)
-        datos = {k: dict(v) for k, v in semanticos[tema].items()}
-        # surface/ink (lima) y text/on-ink pasan a support; surface/ink y
-        # text/on-ink se redefinen. Se reemplazan en su lugar para mantener
-        # el orden del archivo.
-        datos['surface/support'] = datos.pop('surface/ink')
-        datos['text/on-support'] = datos.pop('text/on-ink')
-        for nombre, (ref, _) in AJUSTES.items():
-            datos[nombre] = {'ref': ref}
+        datos = {RENOMBRES.get(k, k): dict(v) for k, v in semanticos[tema].items()}
         orden = []
         for nombre in semanticos[tema]:
-            if nombre == 'surface/ink':
-                orden += ['surface/ink', 'surface/support']
-            elif nombre == 'text/on-ink':
-                orden += ['text/on-ink', 'text/on-support']
-            else:
-                orden.append(nombre)
+            orden.append(nombre)
+            if nombre in RENOMBRES:
+                orden.append(RENOMBRES[nombre])
+            orden += INSERTAR_DESPUES.get(nombre, [])
+        for nombre, ref in AJUSTES[tema].items():
+            datos[nombre] = {'ref': ref}
+            if nombre not in orden:
+                sys.exit(f'✗ AJUSTES: {nombre} no tiene lugar en el orden (INSERTAR_DESPUES)')
         for nombre in orden:
             d = datos[nombre]
             _, destino = buscar(d['ref'], [prim])
-            desc = AJUSTES.get(nombre, (None, ''))[1]
+            if nombre not in DESCRIPCIONES:
+                sys.exit(f'✗ {nombre} sin descripción en DESCRIPCIONES')
+            desc = DESCRIPCIONES[nombre]
             if 'alpha' in d:
                 rgba = dict(prim.valor(destino), a=d['alpha'])
-                c.agregar(nombre, 'COLOR', rgba, desc or f'{d["ref"]} al {round(d["alpha"] * 100)}%')
+                c.agregar(nombre, 'COLOR', rgba, f'{desc} ({d["ref"]} al {round(d["alpha"] * 100)}%)')
             else:
                 c.agregar(nombre, 'COLOR', prim.valor(destino), desc, alias=destino)
         if tema == 'claro':

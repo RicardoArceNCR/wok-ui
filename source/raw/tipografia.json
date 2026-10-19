@@ -84,7 +84,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -104,7 +104,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -124,7 +124,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -144,7 +144,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -164,7 +164,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -184,7 +184,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -204,7 +204,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -224,7 +224,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -244,7 +244,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -264,7 +264,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -284,7 +284,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -304,7 +304,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -324,7 +324,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -344,7 +344,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -364,7 +364,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -384,7 +384,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -404,7 +404,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -424,7 +424,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -444,7 +444,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -464,7 +464,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -484,7 +484,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -504,7 +504,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -524,7 +524,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -544,7 +544,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -564,7 +564,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -584,7 +584,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -604,7 +604,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -624,7 +624,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -644,7 +644,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -664,7 +664,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -684,7 +684,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -704,7 +704,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -724,7 +724,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -744,7 +744,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -764,7 +764,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -784,7 +784,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -804,7 +804,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -824,7 +824,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -844,7 +844,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -864,7 +864,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -884,7 +884,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -904,7 +904,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -924,7 +924,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -944,7 +944,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -964,7 +964,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -984,7 +984,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1004,7 +1004,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1024,7 +1024,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1044,7 +1044,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1064,7 +1064,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1084,7 +1084,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1104,7 +1104,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1124,7 +1124,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1144,7 +1144,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1164,7 +1164,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1184,7 +1184,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1204,7 +1204,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1224,7 +1224,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LETTER_SPACING"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1244,7 +1244,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1264,7 +1264,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1284,7 +1284,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "FONT_SIZE"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}
@@ -1304,7 +1304,7 @@
         }
       },
       "scopes": [
-        "ALL_SCOPES"
+        "LINE_HEIGHT"
       ],
       "hiddenFromPublishing": false,
       "codeSyntax": {}

@@ -73,6 +73,10 @@
   --brand-support: var(--color-support-400);
   --focus-ring-color: var(--color-info-300);
   --focus-ring-offset: var(--color-brand-900);
+  --focus-ring-on-ink: var(--color-info-300);
+  --focus-ring-on-support: var(--color-brand-950);
+  --focus-ring-on-inverse: var(--color-info-700);
+  --focus-ring-on-highlight: var(--color-brand-950);
   --interaction-hover-overlay: var(--color-paper-50);
   --interaction-active-overlay: var(--color-paper-50);
   --interaction-link-default: var(--color-accent-300);
@@ -136,7 +140,7 @@
   --input-bg-disabled: var(--background-subtle);
   --input-border: var(--border-strong);
   --input-border-hover: var(--border-brand);
-  --input-border-focus: var(--brand-action);
+  --input-border-focus: var(--focus-ring-color);
   --input-border-error: var(--feedback-error-icon);
   --input-border-success: var(--feedback-success-icon);
   --input-border-disabled: var(--border-subtle);

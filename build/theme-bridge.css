@@ -26,17 +26,19 @@
 @import "./theme-bridge-typography.generated.css";
 
 @theme inline {
-  /* Familias. Los tokens --brand-font-* son pilas CSS que empiezan por la
-     variable de next/font del sitio (fonts.ts: variable "--font-display" y
-     "--font-body", puestas en <html>), con respaldo si no existe. Mono es
-     la del sistema. Contrato: si el sitio carga las fuentes con otro nombre
-     de variable, cae al respaldo.
-     Ojo: `--font-display` es a la vez la variable de next/font y la clave de
-     Tailwind (utility `font-display`). Funciona porque next/font la define
-     sin capa sobre <html> y le gana a la de @layer theme. */
-  --font-sans: var(--brand-font-body);
-  --font-display: var(--brand-font-display);
-  --font-mono: var(--brand-font-mono);
+  /* Familias. El sitio carga las fuentes con next/font y define en <html>
+     sus propias variables (nombres del sitio, no del paquete):
+       --font-wok-display   Gang of Three (variable: "--font-wok-display")
+       --font-wok-body      Lato servida como "WOK Sans" (variable: "--font-wok-body")
+       --font-wok-mono      opcional; sin ella, la mono del sistema
+     Si falta alguna, cae al nombre de familia del token (--brand-font-*,
+     el mismo que usa Figma) y después al respaldo genérico. No hay ciclo:
+     las claves de Tailwind (--font-display, --font-sans, --font-mono) no
+     son las variables de next/font. "WokDisplayFallback" es el @font-face
+     de métricas ajustadas que define el sitio; si no existe, se salta. */
+  --font-display: var(--font-wok-display, var(--brand-font-display), "WokDisplayFallback", Arial, Helvetica, sans-serif);
+  --font-sans: var(--font-wok-body, var(--brand-font-body), system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif);
+  --font-mono: var(--font-wok-mono, var(--brand-font-mono));
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

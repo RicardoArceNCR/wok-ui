@@ -3939,12 +3939,12 @@ export default {
     },
     secondary: {
       $type: "color",
-      $value: "#55524e",
+      $value: "#3f3d39",
       filePath: "source/semanticos.json",
       isSource: true,
       original: {
         $type: "color",
-        $value: "{color.neutral.700}",
+        $value: "{color.neutral.800}",
       },
       name: "TextSecondary",
       attributes: {
@@ -3955,12 +3955,12 @@ export default {
     },
     tertiary: {
       $type: "color",
-      $value: "#6b6964",
+      $value: "#55524e",
       filePath: "source/semanticos.json",
       isSource: true,
       original: {
         $type: "color",
-        $value: "{color.neutral.600}",
+        $value: "{color.neutral.700}",
       },
       name: "TextTertiary",
       attributes: {
@@ -4327,14 +4327,12 @@ export default {
     },
     "font-display": {
       $type: "string",
-      $value:
-        'var(--font-display, "Gang of Three", "WokDisplayFallback", Arial, Helvetica, sans-serif)',
+      $value: "Gang of Three",
       filePath: "source/semanticos.json",
       isSource: true,
       original: {
         $type: "string",
-        $value:
-          'var(--font-display, "Gang of Three", "WokDisplayFallback", Arial, Helvetica, sans-serif)',
+        $value: "Gang of Three",
       },
       name: "BrandFontDisplay",
       attributes: {
@@ -4345,14 +4343,12 @@ export default {
     },
     "font-body": {
       $type: "string",
-      $value:
-        'var(--font-body, Lato, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif)',
+      $value: "Lato",
       filePath: "source/semanticos.json",
       isSource: true,
       original: {
         $type: "string",
-        $value:
-          'var(--font-body, Lato, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif)',
+        $value: "Lato",
       },
       name: "BrandFontBody",
       attributes: {
@@ -4383,12 +4379,12 @@ export default {
   focus: {
     "ring-color": {
       $type: "color",
-      $value: "#2179b7",
+      $value: "#156195",
       filePath: "source/semanticos.json",
       isSource: true,
       original: {
         $type: "color",
-        $value: "{color.info.600}",
+        $value: "{color.info.700}",
       },
       name: "FocusRingColor",
       attributes: {
@@ -4412,6 +4408,70 @@ export default {
         type: "ring-offset",
       },
       path: ["focus", "ring-offset"],
+    },
+    "ring-on-ink": {
+      $type: "color",
+      $value: "#97c9f3",
+      filePath: "source/semanticos.json",
+      isSource: true,
+      original: {
+        $type: "color",
+        $value: "{color.info.300}",
+      },
+      name: "FocusRingOnInk",
+      attributes: {
+        category: "focus",
+        type: "ring-on-ink",
+      },
+      path: ["focus", "ring-on-ink"],
+    },
+    "ring-on-support": {
+      $type: "color",
+      $value: "#11221c",
+      filePath: "source/semanticos.json",
+      isSource: true,
+      original: {
+        $type: "color",
+        $value: "{color.brand.950}",
+      },
+      name: "FocusRingOnSupport",
+      attributes: {
+        category: "focus",
+        type: "ring-on-support",
+      },
+      path: ["focus", "ring-on-support"],
+    },
+    "ring-on-inverse": {
+      $type: "color",
+      $value: "#97c9f3",
+      filePath: "source/semanticos.json",
+      isSource: true,
+      original: {
+        $type: "color",
+        $value: "{color.info.300}",
+      },
+      name: "FocusRingOnInverse",
+      attributes: {
+        category: "focus",
+        type: "ring-on-inverse",
+      },
+      path: ["focus", "ring-on-inverse"],
+    },
+    "ring-on-highlight": {
+      $type: "color",
+      $value: "#11221c",
+      filePath: "source/semanticos.json",
+      isSource: true,
+      original: {
+        $type: "color",
+        $value: "{color.brand.950}",
+      },
+      name: "FocusRingOnHighlight",
+      attributes: {
+        category: "focus",
+        type: "ring-on-highlight",
+      },
+      path: ["focus", "ring-on-highlight"],
     },
   },
   interaction: {
@@ -5517,12 +5577,12 @@ export default {
     },
     "border-focus": {
       $type: "color",
-      $value: "#d44304",
+      $value: "#156195",
       filePath: "source/componentes.json",
       isSource: true,
       original: {
         $type: "color",
-        $value: "{brand.action}",
+        $value: "{focus.ring-color}",
       },
       name: "InputBorderFocus",
       attributes: {
@@ -5613,7 +5673,7 @@ export default {
     },
     placeholder: {
       $type: "color",
-      $value: "#6b6964",
+      $value: "#55524e",
       filePath: "source/componentes.json",
       isSource: true,
       original: {
@@ -5629,7 +5689,7 @@ export default {
     },
     label: {
       $type: "color",
-      $value: "#55524e",
+      $value: "#3f3d39",
       filePath: "source/componentes.json",
       isSource: true,
       original: {
@@ -6046,7 +6106,7 @@ export default {
       },
       text: {
         $type: "color",
-        $value: "#55524e",
+        $value: "#3f3d39",
         filePath: "source/componentes.json",
         isSource: true,
         original: {
