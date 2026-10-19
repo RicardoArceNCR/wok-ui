@@ -38,7 +38,7 @@ FAM_LABEL = {
 INK = ('brand', 900)  # texto oscuro de referencia en las tarjetas de marca
 BRAND = [  # familia/stop, rol en los semanticos
     ('brand', 900, 'Verde Bosque Profundo. text/primary, brand/main, surface/ink y la página en oscuro.'),
-    ('accent', 500, 'Naranja Intenso. brand/accent y surface/highlight: ilustración y display ≥24px.'),
+    ('accent', 500, 'Naranja Intenso. brand/accent: ilustración y display sobre bosque, nunca texto sobre marfil. surface/highlight: fondo con texto bosque.'),
     ('accent', 600, 'brand/action: botón primario con texto blanco. El 500 no llega a AA con blanco.'),
     ('support', 400, 'Verde Lima Suave. brand/support y surface/support, con texto bosque.'),
     ('paper', 50, 'Marfil Cálido. background/page en claro y texto sobre bosque.'),

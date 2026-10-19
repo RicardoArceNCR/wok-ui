@@ -212,8 +212,8 @@
   --surface-inverse-subtle: rgba(244, 239, 230, 0.1);
   --text-inverse-secondary: rgba(244, 239, 230, 0.78);
   --border-inverse-subtle: rgba(244, 239, 230, 0.24);
-  --brand-font-display: var(--font-display, "Gang of Three", "WokDisplayFallback", Arial, Helvetica, sans-serif);
-  --brand-font-body: var(--font-body, Lato, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif);
+  --brand-font-display: Gang of Three;
+  --brand-font-body: Lato;
   --brand-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   --overlay-modal: rgba(17, 34, 28, 0.7);
   --overlay-card: rgba(17, 34, 28, 0.24);
@@ -251,11 +251,11 @@
   --opacity-strong: 0.72;
   --opacity-high: 0.8;
   --opacity-full: 1;
-  --breakpoint-sm: 640;
-  --breakpoint-md: 768;
-  --breakpoint-lg: 1024;
-  --breakpoint-xl: 1280;
-  --breakpoint-2xl: 1536;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
   --shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10);
   --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.10);
   --shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px -4px rgba(0, 0, 0, 0.10);
@@ -285,8 +285,8 @@
   --surface-highlight-bg: var(--color-accent-500);
   --surface-highlight-text: var(--color-brand-950);
   --text-primary: var(--color-brand-900);
-  --text-secondary: var(--color-neutral-700);
-  --text-tertiary: var(--color-neutral-600);
+  --text-secondary: var(--color-neutral-800);
+  --text-tertiary: var(--color-neutral-700);
   --text-disabled: var(--color-neutral-400);
   --text-inverse: var(--color-paper-50);
   --text-brand: var(--color-accent-700);
@@ -307,8 +307,12 @@
   --brand-action-press: var(--color-accent-800);
   --brand-accent: var(--color-accent-500);
   --brand-support: var(--color-support-400);
-  --focus-ring-color: var(--color-info-600);
+  --focus-ring-color: var(--color-info-700);
   --focus-ring-offset: var(--color-white);
+  --focus-ring-on-ink: var(--color-info-300);
+  --focus-ring-on-support: var(--color-brand-950);
+  --focus-ring-on-inverse: var(--color-info-300);
+  --focus-ring-on-highlight: var(--color-brand-950);
   --interaction-hover-overlay: var(--color-brand-950);
   --interaction-active-overlay: var(--color-brand-950);
   --interaction-link-default: var(--color-accent-700);
@@ -387,7 +391,7 @@
   --input-bg-disabled: var(--background-subtle);
   --input-border: var(--border-strong);
   --input-border-hover: var(--border-brand);
-  --input-border-focus: var(--brand-action);
+  --input-border-focus: var(--focus-ring-color);
   --input-border-error: var(--feedback-error-icon);
   --input-border-success: var(--feedback-success-icon);
   --input-border-disabled: var(--border-subtle);
@@ -427,11 +431,11 @@
   --avatar-bg: var(--brand-subtle);
   --avatar-text: var(--brand-strong);
   --avatar-border: var(--border-default);
-  /* Los tokens ya son pilas con respaldo. Acá no hay next/font: el cuerpo
-     sale de Lato (Google Fonts, original OFL) y el display de Gang of Three
-     solo si está instalada en la máquina; si no, el respaldo. */
-  --f-display: var(--brand-font-display);
-  --f-body: var(--brand-font-body);
+  /* Mismo orden que el bridge, sin next/font: nombre de familia del token y
+     respaldo. Lato sale de Google Fonts (original, OFL); Gang of Three solo
+     se ve si está instalada en la máquina. */
+  --f-display: var(--brand-font-display), "WokDisplayFallback", Arial, Helvetica, sans-serif;
+  --f-body: var(--brand-font-body), system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --f-mono: var(--brand-font-mono);
   --measure: 42rem;
 }
@@ -507,6 +511,10 @@
   --brand-support: var(--color-support-400);
   --focus-ring-color: var(--color-info-300);
   --focus-ring-offset: var(--color-brand-900);
+  --focus-ring-on-ink: var(--color-info-300);
+  --focus-ring-on-support: var(--color-brand-950);
+  --focus-ring-on-inverse: var(--color-info-700);
+  --focus-ring-on-highlight: var(--color-brand-950);
   --interaction-hover-overlay: var(--color-paper-50);
   --interaction-active-overlay: var(--color-paper-50);
   --interaction-link-default: var(--color-accent-300);
@@ -570,7 +578,7 @@
   --input-bg-disabled: var(--background-subtle);
   --input-border: var(--border-strong);
   --input-border-hover: var(--border-brand);
-  --input-border-focus: var(--brand-action);
+  --input-border-focus: var(--focus-ring-color);
   --input-border-error: var(--feedback-error-icon);
   --input-border-success: var(--feedback-success-icon);
   --input-border-disabled: var(--border-subtle);
@@ -684,6 +692,10 @@
   --brand-support: var(--color-support-400);
   --focus-ring-color: var(--color-info-300);
   --focus-ring-offset: var(--color-brand-900);
+  --focus-ring-on-ink: var(--color-info-300);
+  --focus-ring-on-support: var(--color-brand-950);
+  --focus-ring-on-inverse: var(--color-info-700);
+  --focus-ring-on-highlight: var(--color-brand-950);
   --interaction-hover-overlay: var(--color-paper-50);
   --interaction-active-overlay: var(--color-paper-50);
   --interaction-link-default: var(--color-accent-300);
@@ -747,7 +759,7 @@
   --input-bg-disabled: var(--background-subtle);
   --input-border: var(--border-strong);
   --input-border-hover: var(--border-brand);
-  --input-border-focus: var(--brand-action);
+  --input-border-focus: var(--focus-ring-color);
   --input-border-error: var(--feedback-error-icon);
   --input-border-success: var(--feedback-success-icon);
   --input-border-disabled: var(--border-subtle);
@@ -881,6 +893,7 @@ h3 { font: 700 var(--typography-styles-label-md-size)/1.3 var(--f-body); color: 
 .roles li { display: flex; align-items: center; gap: var(--spacing-3); min-width: 0; }
 .roles .s { flex: none; width: 2.25rem; height: 2.25rem; background: var(--c); border: 1px solid var(--border-subtle); }
 .roles .t { flex: none; width: 2.25rem; font: 400 1.25rem/1 var(--f-display); color: var(--c); text-align: center; }
+.roles .f { flex: none; width: 2.25rem; height: 2.25rem; background: var(--bg); outline: 2px solid var(--c); outline-offset: -6px; border: 1px solid var(--border-subtle); }
 .roles .b { flex: none; width: 2.25rem; height: 2.25rem; border: 2px solid var(--c); background: var(--surface-base); }
 .fb { display: grid; gap: var(--spacing-2); }
 .fb div { padding: var(--spacing-3) var(--spacing-4); border: 1px solid; border-radius: var(--radius-md); font-size: var(--typography-styles-body-sm-size); }
@@ -974,12 +987,12 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
   <p class="over">Sistema · @wok/ui v0.1.0</p>
   <h1>WOK<span class="dot">.</span></h1>
   <p class="lede">Los tokens del sitio de WOK, tal como los publica el paquete. Todo lo que ves en esta página sale de las variables de Figma, compiladas a <code>tokens.css</code>. Si algo se ve mal acá, se arregla en Figma, no en el sitio.</p>
-  <div class="facts"><span><b>9</b> rampas de color</span><span><b>420</b> tokens en :root</span><span><b>2</b> temas</span><span>Fuente: <code>@wok/ui</code></span></div>
+  <div class="facts"><span><b>9</b> rampas de color</span><span><b>424</b> tokens en :root</span><span><b>2</b> temas</span><span>Fuente: <code>@wok/ui</code></span></div>
 </div>
 
 <section id="marca">
   <div class="sh"><h2>Marca</h2><p>Los cuatro colores del manual de WOK, con el stop que los publica y el rol que cumplen en los semánticos, más el naranja de acción. El texto de cada tarjeta es el que más contraste da; los dos ratios están medidos.</p></div>
-  <div class="brand-grid"><article class="brand" style="--bg:var(--color-brand-900);--fg:#FFFFFF"><h3>brand/900</h3><p>Verde Bosque Profundo. text/primary, brand/main, surface/ink y la página en oscuro.</p><dl><dt>hex</dt><dd>#1A3129</dd><dt>blanco encima</dt><dd>13.86:1</dd><dt>brand/900 encima</dt><dd>1.00:1</dd></dl></article><article class="brand" style="--bg:var(--color-accent-500);--fg:#1A3129"><h3>accent/500</h3><p>Naranja Intenso. brand/accent y surface/highlight: ilustración y display ≥24px.</p><dl><dt>hex</dt><dd>#FF5100</dd><dt>blanco encima</dt><dd>3.27:1</dd><dt>brand/900 encima</dt><dd>4.24:1</dd></dl></article><article class="brand" style="--bg:var(--color-accent-600);--fg:#FFFFFF"><h3>accent/600</h3><p>brand/action: botón primario con texto blanco. El 500 no llega a AA con blanco.</p><dl><dt>hex</dt><dd>#D44304</dd><dt>blanco encima</dt><dd>4.56:1</dd><dt>brand/900 encima</dt><dd>3.04:1</dd></dl></article><article class="brand" style="--bg:var(--color-support-400);--fg:#1A3129"><h3>support/400</h3><p>Verde Lima Suave. brand/support y surface/support, con texto bosque.</p><dl><dt>hex</dt><dd>#A7CC73</dd><dt>blanco encima</dt><dd>1.82:1</dd><dt>brand/900 encima</dt><dd>7.61:1</dd></dl></article><article class="brand" style="--bg:var(--color-paper-50);--fg:#1A3129"><h3>paper/50</h3><p>Marfil Cálido. background/page en claro y texto sobre bosque.</p><dl><dt>hex</dt><dd>#F4EFE6</dd><dt>blanco encima</dt><dd>1.15:1</dd><dt>brand/900 encima</dt><dd>12.10:1</dd></dl></article></div>
+  <div class="brand-grid"><article class="brand" style="--bg:var(--color-brand-900);--fg:#FFFFFF"><h3>brand/900</h3><p>Verde Bosque Profundo. text/primary, brand/main, surface/ink y la página en oscuro.</p><dl><dt>hex</dt><dd>#1A3129</dd><dt>blanco encima</dt><dd>13.86:1</dd><dt>brand/900 encima</dt><dd>1.00:1</dd></dl></article><article class="brand" style="--bg:var(--color-accent-500);--fg:#1A3129"><h3>accent/500</h3><p>Naranja Intenso. brand/accent: ilustración y display sobre bosque, nunca texto sobre marfil. surface/highlight: fondo con texto bosque.</p><dl><dt>hex</dt><dd>#FF5100</dd><dt>blanco encima</dt><dd>3.27:1</dd><dt>brand/900 encima</dt><dd>4.24:1</dd></dl></article><article class="brand" style="--bg:var(--color-accent-600);--fg:#FFFFFF"><h3>accent/600</h3><p>brand/action: botón primario con texto blanco. El 500 no llega a AA con blanco.</p><dl><dt>hex</dt><dd>#D44304</dd><dt>blanco encima</dt><dd>4.56:1</dd><dt>brand/900 encima</dt><dd>3.04:1</dd></dl></article><article class="brand" style="--bg:var(--color-support-400);--fg:#1A3129"><h3>support/400</h3><p>Verde Lima Suave. brand/support y surface/support, con texto bosque.</p><dl><dt>hex</dt><dd>#A7CC73</dd><dt>blanco encima</dt><dd>1.82:1</dd><dt>brand/900 encima</dt><dd>7.61:1</dd></dl></article><article class="brand" style="--bg:var(--color-paper-50);--fg:#1A3129"><h3>paper/50</h3><p>Marfil Cálido. background/page en claro y texto sobre bosque.</p><dl><dt>hex</dt><dd>#F4EFE6</dd><dt>blanco encima</dt><dd>1.15:1</dd><dt>brand/900 encima</dt><dd>12.10:1</dd></dl></article></div>
 </section>
 
 <section id="escalas">
@@ -1023,6 +1036,13 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
       <li><span class="b" style="--c:var(--border-default)"></span><code>border/default</code></li>
       <li><span class="b" style="--c:var(--border-strong)"></span><code>border/strong</code></li>
       <li><span class="b" style="--c:var(--focus-ring-color)"></span><code>focus/ring-color</code></li>
+    </ul></div>
+    <div><h3>Foco</h3><ul>
+      <li><span class="f" style="--bg:var(--background-page);--c:var(--focus-ring-color)"></span><code>focus/ring-color</code></li>
+      <li><span class="f" style="--bg:var(--surface-ink);--c:var(--focus-ring-on-ink)"></span><code>focus/ring-on-ink</code></li>
+      <li><span class="f" style="--bg:var(--surface-support);--c:var(--focus-ring-on-support)"></span><code>focus/ring-on-support</code></li>
+      <li><span class="f" style="--bg:var(--surface-inverse);--c:var(--focus-ring-on-inverse)"></span><code>focus/ring-on-inverse</code></li>
+      <li><span class="f" style="--bg:var(--surface-highlight-bg);--c:var(--focus-ring-on-highlight)"></span><code>focus/ring-on-highlight</code></li>
     </ul></div>
     <div><h3>Estados</h3><div class="fb">
       <div style="background:var(--feedback-success-bg);color:var(--feedback-success-text);border-color:var(--feedback-success-border)">Éxito · success</div>
@@ -1104,17 +1124,17 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
 </section>
 
 <section id="contraste">
-  <div class="sh"><h2>Contraste</h2><p>Los pares de <code>scripts/contrast-pairs.json</code>, medidos en los dos temas con WCAG 2; APCA Lc va como referencia. 110 pares medidos en los dos temas: 0 fallan y están en ALLOW, 0 fallan sin excepción. El naranja de manual (<code>brand/accent</code>) y el botón sobre la card oscura van como informativos (mínimo 0) y no aparecen.</p></div>
+  <div class="sh"><h2>Contraste</h2><p>Los pares de <code>scripts/contrast-pairs.json</code>, medidos en los dos temas con WCAG 2; APCA Lc va como referencia. 152 pares medidos en los dos temas: 1 fallan y están en ALLOW, 0 fallan sin excepción. No hay pares informativos: lo que falla está en ALLOW de <code>check-contrast.mjs</code>, con su motivo, y se ve acá.</p></div>
   <div class="tablewrap"><table>
     <thead><tr><th>Tema</th><th>Muestra</th><th>Primer plano</th><th>Fondo</th><th>WCAG</th><th>Lc</th><th>Uso</th><th>Estado</th></tr></thead>
     <tbody><tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#1A3129">Aa</span></td><td><code>--text-primary</code></td><td><code>--background-page</code></td><td class="num">12.10</td><td class="num">91</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#1A3129">Aa</span></td><td><code>--text-primary</code></td><td><code>--surface-base</code></td><td class="num">13.86</td><td class="num">100</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#1A3129">Aa</span></td><td><code>--text-primary</code></td><td><code>--surface-raised</code></td><td class="num">13.86</td><td class="num">100</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#55524E">Aa</span></td><td><code>--text-secondary</code></td><td><code>--background-page</code></td><td class="num">6.78</td><td class="num">78</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#55524E">Aa</span></td><td><code>--text-secondary</code></td><td><code>--surface-raised</code></td><td class="num">7.77</td><td class="num">87</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#55524E">Aa</span></td><td><code>--text-secondary</code></td><td><code>--background-subtle</code></td><td class="num">6.04</td><td class="num">70</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#6B6964">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--background-page</code></td><td class="num">4.79</td><td class="num">68</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#6B6964">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--surface-base</code></td><td class="num">5.48</td><td class="num">77</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#3F3D39">Aa</span></td><td><code>--text-secondary</code></td><td><code>--background-page</code></td><td class="num">9.46</td><td class="num">86</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#3F3D39">Aa</span></td><td><code>--text-secondary</code></td><td><code>--surface-raised</code></td><td class="num">10.84</td><td class="num">95</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#3F3D39">Aa</span></td><td><code>--text-secondary</code></td><td><code>--background-subtle</code></td><td class="num">8.42</td><td class="num">78</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#55524E">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--background-page</code></td><td class="num">6.78</td><td class="num">78</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#55524E">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--surface-base</code></td><td class="num">7.77</td><td class="num">87</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#AC380A">Aa</span></td><td><code>--text-brand</code></td><td><code>--background-page</code></td><td class="num">5.52</td><td class="num">71</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#405126">Aa</span></td><td><code>--text-brand-accent</code></td><td><code>--background-page</code></td><td class="num">7.57</td><td class="num">80</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#AC380A">Aa</span></td><td><code>--interaction-link-default</code></td><td><code>--background-page</code></td><td class="num">5.52</td><td class="num">71</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
@@ -1137,11 +1157,11 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FEF6EA;--fg:#7A5400">Aa</span></td><td><code>--feedback-warning-text</code></td><td><code>--feedback-warning-bg</code></td><td class="num">6.33</td><td class="num">78</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFF4F4;--fg:#A4223D">Aa</span></td><td><code>--feedback-error-text</code></td><td><code>--feedback-error-bg</code></td><td class="num">6.78</td><td class="num">79</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#F0F8FF;--fg:#156195">Aa</span></td><td><code>--feedback-info-text</code></td><td><code>--feedback-info-bg</code></td><td class="num">6.16</td><td class="num">77</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#2179B7">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-page</code></td><td class="num">4.09</td><td class="num">63</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-page</code></td><td class="num">5.77</td><td class="num">73</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#D44304">Aa</span></td><td><code>--brand-action</code></td><td><code>--background-page</code></td><td class="num">3.98</td><td class="num">61</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#85837E">Aa</span></td><td><code>--border-strong</code></td><td><code>--surface-base</code></td><td class="num">3.79</td><td class="num">65</td><td>borde de campo</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#1A3129">Aa</span></td><td><code>--text-primary</code></td><td><code>--surface-container</code></td><td class="num">10.77</td><td class="num">84</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#6B6964">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--surface-raised</code></td><td class="num">5.48</td><td class="num">77</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#55524E">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--surface-raised</code></td><td class="num">7.77</td><td class="num">87</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#AC380A">Aa</span></td><td><code>--text-brand</code></td><td><code>--surface-base</code></td><td class="num">6.32</td><td class="num">80</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#405126">Aa</span></td><td><code>--text-brand-accent</code></td><td><code>--surface-base</code></td><td class="num">8.67</td><td class="num">90</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#A7CC73;--fg:#1A3129">Aa</span></td><td><code>--text-on-support</code></td><td><code>--surface-support</code></td><td class="num">7.61</td><td class="num">64</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
@@ -1151,17 +1171,38 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFF4F4;--fg:#C92E4E">Aa</span></td><td><code>--feedback-error-icon</code></td><td><code>--feedback-error-bg</code></td><td class="num">4.89</td><td class="num">70</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#F0F8FF;--fg:#2179B7">Aa</span></td><td><code>--feedback-info-icon</code></td><td><code>--feedback-info-bg</code></td><td class="num">4.37</td><td class="num">67</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#85837E">Aa</span></td><td><code>--border-strong</code></td><td><code>--background-page</code></td><td class="num">3.31</td><td class="num">56</td><td>borde de campo</td><td><span class="state ok">pasa 3</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#2179B7">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-base</code></td><td class="num">4.68</td><td class="num">72</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#D44304">Aa</span></td><td><code>--brand-action</code></td><td><code>--surface-base</code></td><td class="num">4.56</td><td class="num">70</td><td>contorno de botón</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-base</code></td><td class="num">6.61</td><td class="num">82</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#FF5100">Aa</span></td><td><code>--brand-accent</code></td><td><code>--surface-ink</code></td><td class="num">4.24</td><td class="num">39</td><td>naranja de manual: display ≥24px e ilustración sobre bosque</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#AC380A">Aa</span></td><td><code>--interaction-link-default</code></td><td><code>--surface-base</code></td><td class="num">6.32</td><td class="num">80</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#2D5C4C">Aa</span></td><td><code>--interaction-link-visited</code></td><td><code>--surface-base</code></td><td class="num">7.65</td><td class="num">86</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#55524E">Aa</span></td><td><code>--text-secondary</code></td><td><code>--surface-base</code></td><td class="num">7.77</td><td class="num">87</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#3F3D39">Aa</span></td><td><code>--text-secondary</code></td><td><code>--surface-base</code></td><td class="num">10.84</td><td class="num">95</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#1A3129">Aa</span></td><td><code>--input-text</code></td><td><code>--input-bg</code></td><td class="num">13.86</td><td class="num">100</td><td>texto en campo</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#6B6964">Aa</span></td><td><code>--input-placeholder</code></td><td><code>--input-bg</code></td><td class="num">5.48</td><td class="num">77</td><td>texto en campo</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#55524E">Aa</span></td><td><code>--input-label</code></td><td><code>--background-page</code></td><td class="num">6.78</td><td class="num">78</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#55524E">Aa</span></td><td><code>--input-placeholder</code></td><td><code>--input-bg</code></td><td class="num">7.77</td><td class="num">87</td><td>texto en campo</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#3F3D39">Aa</span></td><td><code>--input-label</code></td><td><code>--background-page</code></td><td class="num">9.46</td><td class="num">86</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#85837E">Aa</span></td><td><code>--input-border</code></td><td><code>--input-bg</code></td><td class="num">3.79</td><td class="num">65</td><td>borde de campo</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#F4EFE6">Aa</span></td><td><code>--nav-item-default</code></td><td><code>--nav-bg</code></td><td class="num">12.10</td><td class="num">93</td><td>texto en navegación</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#A7CC73">Aa</span></td><td><code>--nav-item-active</code></td><td><code>--nav-bg</code></td><td class="num">7.61</td><td class="num">64</td><td>texto en navegación</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#F4EFE6">Aa</span></td><td><code>--tooltip-text</code></td><td><code>--tooltip-bg</code></td><td class="num">12.10</td><td class="num">93</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#3F3D39">Aa</span></td><td><code>--text-secondary</code></td><td><code>--surface-container</code></td><td class="num">8.42</td><td class="num">78</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#55524E">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--surface-container</code></td><td class="num">6.04</td><td class="num">70</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#55524E">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--background-subtle</code></td><td class="num">6.04</td><td class="num">70</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#DAD1C1;--fg:#55524E">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--background-strong</code></td><td class="num">5.13</td><td class="num">61</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-subtle</code></td><td class="num">5.14</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#DAD1C1;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-strong</code></td><td class="num">4.37</td><td class="num">56</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-raised</code></td><td class="num">6.61</td><td class="num">82</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#E9E2D6;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-container</code></td><td class="num">5.14</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-subtle</code></td><td class="num">5.77</td><td class="num">73</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--input-bg</code></td><td class="num">6.61</td><td class="num">82</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#156195">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--card-bg</code></td><td class="num">6.61</td><td class="num">82</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FFFFFF;--fg:#156195">Aa</span></td><td><code>--input-border-focus</code></td><td><code>--input-bg</code></td><td class="num">6.61</td><td class="num">82</td><td>foco de campo</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-ink</code></td><td><code>--surface-ink</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-ink</code></td><td><code>--nav-bg</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-ink</code></td><td><code>--surface-accent-bg</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#A7CC73;--fg:#11221C">Aa</span></td><td><code>--focus-ring-on-support</code></td><td><code>--surface-support</code></td><td class="num">9.08</td><td class="num">67</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-inverse</code></td><td><code>--surface-inverse</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-inverse</code></td><td><code>--tooltip-bg</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Claro</td><td><span class="pair sm" style="--bg:#FF5100;--fg:#11221C">Aa</span></td><td><code>--focus-ring-on-highlight</code></td><td><code>--surface-highlight-bg</code></td><td class="num">5.06</td><td class="num">43</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#F4EFE6">Aa</span></td><td><code>--text-primary</code></td><td><code>--background-page</code></td><td class="num">12.10</td><td class="num">93</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#F4EFE6">Aa</span></td><td><code>--text-primary</code></td><td><code>--surface-base</code></td><td class="num">9.53</td><td class="num">89</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#F4EFE6">Aa</span></td><td><code>--text-primary</code></td><td><code>--surface-raised</code></td><td class="num">9.53</td><td class="num">89</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
@@ -1192,7 +1233,7 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#2C1D04;--fg:#F0B758">Aa</span></td><td><code>--feedback-warning-text</code></td><td><code>--feedback-warning-bg</code></td><td class="num">9.05</td><td class="num">67</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#3D0C15;--fg:#FFA6AD">Aa</span></td><td><code>--feedback-error-text</code></td><td><code>--feedback-error-bg</code></td><td class="num">8.96</td><td class="num">65</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#082237;--fg:#97C9F3">Aa</span></td><td><code>--feedback-info-text</code></td><td><code>--feedback-info-bg</code></td><td class="num">9.24</td><td class="num">68</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-page</code></td><td class="num">7.90</td><td class="num">66</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-page</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#D44304">Aa</span></td><td><code>--brand-action</code></td><td><code>--background-page</code></td><td class="num">3.04</td><td class="num">27</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#79AF9B">Aa</span></td><td><code>--border-strong</code></td><td><code>--surface-base</code></td><td class="num">4.37</td><td class="num">44</td><td>borde de campo</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#F4EFE6">Aa</span></td><td><code>--text-primary</code></td><td><code>--surface-container</code></td><td class="num">9.53</td><td class="num">89</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
@@ -1206,7 +1247,9 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#3D0C15;--fg:#FC7584">Aa</span></td><td><code>--feedback-error-icon</code></td><td><code>--feedback-error-bg</code></td><td class="num">6.35</td><td class="num">49</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#082237;--fg:#67ADE7">Aa</span></td><td><code>--feedback-info-icon</code></td><td><code>--feedback-info-bg</code></td><td class="num">6.73</td><td class="num">52</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#79AF9B">Aa</span></td><td><code>--border-strong</code></td><td><code>--background-page</code></td><td class="num">5.56</td><td class="num">49</td><td>borde de campo</td><td><span class="state ok">pasa 3</span></td></tr>
-<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-base</code></td><td class="num">6.22</td><td class="num">62</td><td>no texto</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#D44304">Aa</span></td><td><code>--brand-action</code></td><td><code>--surface-base</code></td><td class="num">2.39</td><td class="num">22</td><td>contorno de botón</td><td><span class="state warn">falla · ALLOW</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-base</code></td><td class="num">6.22</td><td class="num">62</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#FF5100">Aa</span></td><td><code>--brand-accent</code></td><td><code>--surface-ink</code></td><td class="num">4.24</td><td class="num">39</td><td>naranja de manual: display ≥24px e ilustración sobre bosque</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#FFA589">Aa</span></td><td><code>--interaction-link-default</code></td><td><code>--surface-base</code></td><td class="num">5.71</td><td class="num">57</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#A7CC73">Aa</span></td><td><code>--interaction-link-visited</code></td><td><code>--surface-base</code></td><td class="num">5.99</td><td class="num">60</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#DEDCD8">Aa</span></td><td><code>--text-secondary</code></td><td><code>--surface-base</code></td><td class="num">7.97</td><td class="num">77</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
@@ -1216,7 +1259,26 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#79AF9B">Aa</span></td><td><code>--input-border</code></td><td><code>--input-bg</code></td><td class="num">4.37</td><td class="num">44</td><td>borde de campo</td><td><span class="state ok">pasa 3</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#F4EFE6">Aa</span></td><td><code>--nav-item-default</code></td><td><code>--nav-bg</code></td><td class="num">12.10</td><td class="num">93</td><td>texto en navegación</td><td><span class="state ok">pasa 4.5</span></td></tr>
 <tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#A7CC73">Aa</span></td><td><code>--nav-item-active</code></td><td><code>--nav-bg</code></td><td class="num">7.61</td><td class="num">64</td><td>texto en navegación</td><td><span class="state ok">pasa 4.5</span></td></tr>
-<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#1A3129">Aa</span></td><td><code>--tooltip-text</code></td><td><code>--tooltip-bg</code></td><td class="num">12.10</td><td class="num">91</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr></tbody>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#1A3129">Aa</span></td><td><code>--tooltip-text</code></td><td><code>--tooltip-bg</code></td><td class="num">12.10</td><td class="num">91</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#DEDCD8">Aa</span></td><td><code>--text-secondary</code></td><td><code>--surface-container</code></td><td class="num">7.97</td><td class="num">77</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#C9C7C3">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--surface-container</code></td><td class="num">6.46</td><td class="num">64</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#11221C;--fg:#C9C7C3">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--background-subtle</code></td><td class="num">9.80</td><td class="num">71</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#C9C7C3">Aa</span></td><td><code>--text-tertiary</code></td><td><code>--background-strong</code></td><td class="num">6.46</td><td class="num">64</td><td>texto</td><td><span class="state ok">pasa 4.5</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#11221C;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-subtle</code></td><td class="num">9.43</td><td class="num">69</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--background-strong</code></td><td class="num">6.22</td><td class="num">62</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-raised</code></td><td class="num">6.22</td><td class="num">62</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-container</code></td><td class="num">6.22</td><td class="num">62</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#11221C;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--surface-subtle</code></td><td class="num">9.43</td><td class="num">69</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--input-bg</code></td><td class="num">6.22</td><td class="num">62</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-color</code></td><td><code>--card-bg</code></td><td class="num">6.22</td><td class="num">62</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#214338;--fg:#97C9F3">Aa</span></td><td><code>--input-border-focus</code></td><td><code>--input-bg</code></td><td class="num">6.22</td><td class="num">62</td><td>foco de campo</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-ink</code></td><td><code>--surface-ink</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#1A3129;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-ink</code></td><td><code>--nav-bg</code></td><td class="num">7.90</td><td class="num">66</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#11221C;--fg:#97C9F3">Aa</span></td><td><code>--focus-ring-on-ink</code></td><td><code>--surface-accent-bg</code></td><td class="num">9.43</td><td class="num">69</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#A7CC73;--fg:#11221C">Aa</span></td><td><code>--focus-ring-on-support</code></td><td><code>--surface-support</code></td><td class="num">9.08</td><td class="num">67</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#156195">Aa</span></td><td><code>--focus-ring-on-inverse</code></td><td><code>--surface-inverse</code></td><td class="num">5.77</td><td class="num">73</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#F4EFE6;--fg:#156195">Aa</span></td><td><code>--focus-ring-on-inverse</code></td><td><code>--tooltip-bg</code></td><td class="num">5.77</td><td class="num">73</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr>
+<tr><td>Oscuro</td><td><span class="pair sm" style="--bg:#FF5100;--fg:#11221C">Aa</span></td><td><code>--focus-ring-on-highlight</code></td><td><code>--surface-highlight-bg</code></td><td class="num">5.06</td><td class="num">43</td><td>foco</td><td><span class="state ok">pasa 3</span></td></tr></tbody>
   </table></div>
 </section>
 </main>

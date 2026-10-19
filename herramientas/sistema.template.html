@@ -8,11 +8,11 @@
    En el sitio el modo oscuro es la clase .dark; acá se replica con data-theme. */
 :root {
 /*TOKENS_LIGHT*/
-  /* Los tokens ya son pilas con respaldo. Acá no hay next/font: el cuerpo
-     sale de Lato (Google Fonts, original OFL) y el display de Gang of Three
-     solo si está instalada en la máquina; si no, el respaldo. */
-  --f-display: var(--brand-font-display);
-  --f-body: var(--brand-font-body);
+  /* Mismo orden que el bridge, sin next/font: nombre de familia del token y
+     respaldo. Lato sale de Google Fonts (original, OFL); Gang of Three solo
+     se ve si está instalada en la máquina. */
+  --f-display: var(--brand-font-display), "WokDisplayFallback", Arial, Helvetica, sans-serif;
+  --f-body: var(--brand-font-body), system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --f-mono: var(--brand-font-mono);
   --measure: 42rem;
 }
@@ -118,6 +118,7 @@ h3 { font: 700 var(--typography-styles-label-md-size)/1.3 var(--f-body); color: 
 .roles li { display: flex; align-items: center; gap: var(--spacing-3); min-width: 0; }
 .roles .s { flex: none; width: 2.25rem; height: 2.25rem; background: var(--c); border: 1px solid var(--border-subtle); }
 .roles .t { flex: none; width: 2.25rem; font: 400 1.25rem/1 var(--f-display); color: var(--c); text-align: center; }
+.roles .f { flex: none; width: 2.25rem; height: 2.25rem; background: var(--bg); outline: 2px solid var(--c); outline-offset: -6px; border: 1px solid var(--border-subtle); }
 .roles .b { flex: none; width: 2.25rem; height: 2.25rem; border: 2px solid var(--c); background: var(--surface-base); }
 .fb { display: grid; gap: var(--spacing-2); }
 .fb div { padding: var(--spacing-3) var(--spacing-4); border: 1px solid; border-radius: var(--radius-md); font-size: var(--typography-styles-body-sm-size); }
@@ -253,6 +254,13 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
       <li><span class="b" style="--c:var(--border-strong)"></span><code>border/strong</code></li>
       <li><span class="b" style="--c:var(--focus-ring-color)"></span><code>focus/ring-color</code></li>
     </ul></div>
+    <div><h3>Foco</h3><ul>
+      <li><span class="f" style="--bg:var(--background-page);--c:var(--focus-ring-color)"></span><code>focus/ring-color</code></li>
+      <li><span class="f" style="--bg:var(--surface-ink);--c:var(--focus-ring-on-ink)"></span><code>focus/ring-on-ink</code></li>
+      <li><span class="f" style="--bg:var(--surface-support);--c:var(--focus-ring-on-support)"></span><code>focus/ring-on-support</code></li>
+      <li><span class="f" style="--bg:var(--surface-inverse);--c:var(--focus-ring-on-inverse)"></span><code>focus/ring-on-inverse</code></li>
+      <li><span class="f" style="--bg:var(--surface-highlight-bg);--c:var(--focus-ring-on-highlight)"></span><code>focus/ring-on-highlight</code></li>
+    </ul></div>
     <div><h3>Estados</h3><div class="fb">
       <div style="background:var(--feedback-success-bg);color:var(--feedback-success-text);border-color:var(--feedback-success-border)">Éxito · success</div>
       <div style="background:var(--feedback-warning-bg);color:var(--feedback-warning-text);border-color:var(--feedback-warning-border)">Aviso · warning</div>
@@ -317,7 +325,7 @@ footer.end { padding-top: var(--spacing-10); border-top: 1px solid var(--divider
 </section>
 
 <section id="contraste">
-  <div class="sh"><h2>Contraste</h2><p>Los pares de <code>scripts/contrast-pairs.json</code>, medidos en los dos temas con WCAG 2; APCA Lc va como referencia. <!--CONTRAST_SUMMARY--> El naranja de manual (<code>brand/accent</code>) y el botón sobre la card oscura van como informativos (mínimo 0) y no aparecen.</p></div>
+  <div class="sh"><h2>Contraste</h2><p>Los pares de <code>scripts/contrast-pairs.json</code>, medidos en los dos temas con WCAG 2; APCA Lc va como referencia. <!--CONTRAST_SUMMARY--> No hay pares informativos: lo que falla está en ALLOW de <code>check-contrast.mjs</code>, con su motivo, y se ve acá.</p></div>
   <div class="tablewrap"><table>
     <thead><tr><th>Tema</th><th>Muestra</th><th>Primer plano</th><th>Fondo</th><th>WCAG</th><th>Lc</th><th>Uso</th><th>Estado</th></tr></thead>
     <tbody><!--CONTRAST--></tbody>

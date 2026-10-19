@@ -45,7 +45,13 @@ del export de variables** (12 colecciones, alias como `VARIABLE_ALIAS` con
 `aliasName` y `resolvedValue`), a partir de `herramientas/semilla/`
 (copias sin tocar de `propuesta.json` y `semanticos.json`). Ricardo los
 importa en Figma y desde ahí se exporta. El script no se vuelve a correr: se
-niega a pisar `source/raw/` sin `--forzar`.
+niega a pisar `source/raw/` sin `--forzar`. Los cambios posteriores a la
+propuesta no se editan en la copia: van en `AJUSTES` del script, por tema y
+con motivo. Cada semántico lleva una línea de uso como descripción, y los
+FLOAT y las familias llevan scopes acotados (`OPACITY`, `CORNER_RADIUS`,
+`STROKE_FLOAT`, `GAP`/`WIDTH_HEIGHT`, `FONT_*`, `LINE_HEIGHT`,
+`LETTER_SPACING`, `FONT_FAMILY`); ratios, motion y z-index quedan sin scope
+porque solo los usa el CSS.
 
 ### Colores
 
@@ -62,8 +68,11 @@ Las cuatro anclas del manual quedan **exactas** en un stop:
 
 - **Acción = `accent/600` (#D44304)** con texto blanco: 4,56:1. El naranja
   de manual con blanco da 3,27 y con bosque 4,24: ninguno alcanza AA en texto
-  normal. #FF5100 queda para ilustración, display ≥24px y
-  `surface/highlight`.
+  normal. #FF5100 (`brand/accent`) queda para ilustración y display ≥24px
+  **sobre bosque** (4,24:1), y como fondo de `surface/highlight` con texto
+  bosque (5,06:1). Sobre marfil da 2,85:1: no sirve ni como texto grande;
+  ahí los titulares van en `brand/action` (accent-600, 3,98:1, ≥24px) o en
+  `text/brand` (accent-700, cualquier tamaño).
 - **El marfil va en `paper`, no en `neutral`.** Su croma (0,013) supera el
   0,010 que `check-ramps` tolera en `neutral` (regla 4). En vez de abrir una
   entrada de `ALLOW` (que es backlog de bugs, no permisos), el marfil y sus
@@ -74,8 +83,32 @@ Las cuatro anclas del manual quedan **exactas** en un stop:
   lo tenía la franja lima; acá la lima es `surface/support` con
   `text/on-support` bosque (7,61:1). En oscuro `surface/ink` coincide con la
   página: es a propósito, el material no cambia con el tema.
+- **Texto en claro, un stop más oscuro que la propuesta**: `text/tertiary`
+  en `neutral/600` daba 4,26:1 sobre `surface/container` y
+  `background/subtle` (paper-100). Queda `text/secondary` = `neutral/800` y
+  `text/tertiary` = `neutral/700` (≥5,13:1 sobre cualquier fondo claro).
 - `feedback/error` usa `danger` (carmín a 15°), no el naranja. El botón
   peligroso es `danger/700`, más oscuro que la acción.
+
+### Foco: un anillo por superficie
+
+Un solo color de foco no llega a 3:1 en todas las superficies de WOK (el
+azul de foco claro da 2,96 sobre bosque y 2,57 sobre lima; el naranja de
+acción, 2,39 sobre un campo oscuro). Hay un token por tipo de superficie y
+el sitio usa el de la superficie donde se dibuja el anillo:
+
+| Token | Claro | Oscuro | Sobre |
+|---|---|---|---|
+| `focus/ring-color` | info-700 | info-300 | página, `background/*`, `surface/base`, `raised`, `container`, `subtle`, campos, tarjetas |
+| `focus/ring-on-ink` | info-300 | info-300 | `surface/ink`, navegación, `surface/accent-bg` |
+| `focus/ring-on-support` | brand-950 | brand-950 | `surface/support` |
+| `focus/ring-on-inverse` | info-300 | info-700 | `surface/inverse`, tooltip |
+| `focus/ring-on-highlight` | brand-950 | brand-950 | `surface/highlight-bg` |
+
+El borde de foco de los campos (`input/border-focus`) es `focus/ring-color`.
+Cada combinación está en `scripts/contrast-pairs.json` con mínimo 3: la
+más justa es 4,37:1 (`focus/ring-color` sobre `background/strong` en
+claro).
 
 ### Dudas abiertas sobre el manual
 
@@ -92,13 +125,18 @@ Las cuatro anclas del manual quedan **exactas** en un stop:
 
 - Las fuentes **no** van en el paquete: las sirve el sitio con
   `next/font/local`.
-- `brand/font-display`, `brand/font-body` y `brand/font-mono` son **pilas
-  CSS**: empiezan por la variable de `next/font` del sitio
-  (`var(--font-display, …)`, `var(--font-body, …)`) y siguen con el respaldo
-  para donde no hay `next/font` (la lámina, un Storybook). Mono es la del
-  sistema. El bridge mapea `font-display`, `font-sans` y `font-mono` a esos
-  tokens. Consecuencia en Figma: estas variables no sirven para enlazar un
-  estilo de texto; ahí se elige la fuente directamente.
+- `brand/font-display` = `Gang of Three` y `brand/font-body` = `Lato` son
+  **nombres de familia**, los mismos que en Figma (sirven para enlazar
+  estilos de texto). `brand/font-mono` es la pila mono del sistema: WOK no
+  tiene mono de marca.
+- El puente a `next/font` está en `theme-bridge.css`. El sitio define en
+  `<html>` sus propias variables, `--font-wok-display` y `--font-wok-body`
+  (y opcionalmente `--font-wok-mono`), y el bridge arma
+  `--font-display: var(--font-wok-display, var(--brand-font-display),
+  "WokDisplayFallback", Arial, Helvetica, sans-serif)` y lo mismo para
+  `--font-sans` y `--font-mono`. Las claves de Tailwind no coinciden con las
+  variables de `next/font`, así que no hay ciclo, y si falta la variable del
+  sitio la pila cae al nombre del token y al respaldo: nunca queda vacía.
 - **Gang of Three (display): provisoria, licencia pendiente.** El archivo
   no trae licencia; `fsType` 8 es un permiso técnico, no una licencia web.
   Además el texto del manual nombra a Meditative, mientras la muestra es Gang
@@ -114,21 +152,31 @@ Las cuatro anclas del manual quedan **exactas** en un stop:
 Conjunto genérico (botón, campo, tarjeta, navegación, modal, etiqueta,
 toast, tooltip, avatar), todo con alias a semánticos o escalas, en claro y
 oscuro. Los botones primario, secundario y peligroso siguen la propuesta.
-Dos decisiones propias, a revisar en Figma: el borde de campo es
-`border/strong` (3,79:1, alcanza el 3:1 de un límite de control) y la
-navegación va sobre `surface/ink`.
+Decisiones propias, a revisar en Figma: el borde de campo es
+`border/strong` (3,79:1, alcanza el 3:1 de un límite de control), el foco de
+campo es `focus/ring-color` y la navegación va sobre `surface/ink` con
+`focus/ring-on-ink`.
 
 ### El contraste bloquea el build
 
-`check-contrast` mide 57 pares en claro y oscuro (texto sobre fondo,
-botones, feedback, foco, bordes de campo y siete de componentes) y falla
-debajo de AA. `ALLOW` arranca vacía en contraste y en rampas: un par o una
-rampa que falle entra solo con motivo escrito y el ratio medido.
+`check-contrast` mide 76 pares en claro y oscuro (texto sobre fondo,
+botones, feedback, bordes de campo, el anillo de foco sobre cada superficie
+y componentes) y falla debajo del mínimo: 4,5 para texto, 3 para no texto y
+foco. **No hay pares informativos** (mínimo 0): un par que no cumple está en
+`ALLOW`, con motivo y ratio, y la corrida lo cuenta.
+
+`ALLOW` de contraste tiene una entrada: `brand/action` sobre `surface/base`
+en oscuro (2,39:1), el contorno del botón primario sobre una superficie
+bosque-800. WCAG 1.4.11 no exige el contorno cuando la etiqueta identifica
+el control (blanco sobre accent-600, 4,56:1), y cambiar la acción en oscuro
+rompería ese texto. Sobre la página oscura da 3,04 y pasa. `ALLOW` de rampas
+está vacía.
 
 ## Consecuencias
 
 - El sitio fija `#v0.1.0` e importa los tres CSS en `globals.css`; carga
-  `next/font` con `--font-display` y `--font-body` en `<html>`.
+  `next/font` con `variable: "--font-wok-display"` y `"--font-wok-body"` en
+  `<html>`, y usa el anillo de foco de cada superficie.
 - Cuando exista el Figma, el primer export reemplaza la semilla. Si Figma
   cambia un valor o un nombre, es una versión nueva con su línea en el
   CHANGELOG (un renombre es mayor).

@@ -45,20 +45,33 @@ El oscuro va por la clase `.dark`, no por `prefers-color-scheme`. El sitio no re
 | Texto | `--text-primary`, `--text-secondary`, `--text-tertiary` |
 | Acción (botón primario, `bg-primary`) | `--brand-action` (+ `-hover`, `-press`) con `--text-on-brand` |
 | Superficie de marca | `--surface-ink` (bosque en los dos temas) con `--text-on-ink`; franja lima `--surface-support` con `--text-on-support` |
-| Naranja de manual | `--brand-accent` y `--surface-highlight-bg`: solo display ≥24px o ilustración |
-| Fuentes | `--brand-font-display`, `--brand-font-body`, `--brand-font-mono` (Tailwind: `font-display`, `font-sans`, `font-mono`) |
+| Naranja de manual #FF5100 | `--brand-accent`: ilustración y display (≥24px) **sobre bosque** (`--surface-ink`, 4,24:1). Nunca texto sobre marfil (2,85:1): ahí los titulares van en `--brand-action` (≥24px, 3,98:1) o `--text-brand` (cualquier tamaño). `--surface-highlight-bg` es el naranja como fondo, con `--surface-highlight-text` bosque (5,06:1). |
+| Foco | Un anillo por superficie, todos ≥3:1: `--focus-ring-color` (página y superficies del tema), `--focus-ring-on-ink` (`--surface-ink`, navegación, `--surface-accent-bg`), `--focus-ring-on-support`, `--focus-ring-on-inverse` (tooltip y `--surface-inverse`), `--focus-ring-on-highlight`. `--ring` de shadcn es `--focus-ring-color`. |
+| Fuentes | Tailwind `font-display`, `font-sans`, `font-mono` (ver abajo) |
+
+Dentro de un contenedor con `--surface-ink` (o la navegación), el sitio redefine el anillo localmente: `--ring: var(--focus-ring-on-ink)` o `outline-color: var(--focus-ring-on-ink)`. Lo mismo con las otras superficies.
 
 ### Fuentes
 
-Las fuentes **no** están en este paquete: las sirve el sitio con `next/font/local`. Los tokens `--brand-font-*` son pilas CSS que empiezan por las variables de `next/font`:
+Las fuentes **no** están en este paquete: las sirve el sitio con `next/font/local`. Los tokens `--brand-font-display` (`Gang of Three`) y `--brand-font-body` (`Lato`) son **nombres de familia**, los mismos que usa Figma; `--brand-font-mono` es la pila mono del sistema (WOK no tiene mono de marca).
+
+El sitio tiene que definir en `<html>` estas variables con el `variable` de `next/font`:
+
+| Variable del sitio | Fuente |
+|---|---|
+| `--font-wok-display` | Gang of Three (`variable: "--font-wok-display"`) |
+| `--font-wok-body` | Lato servida como "WOK Sans" (`variable: "--font-wok-body"`) |
+| `--font-wok-mono` | opcional; sin ella, la mono del sistema |
+
+y, si quiere el respaldo con métricas ajustadas del display, el `@font-face` `WokDisplayFallback`. El bridge arma la pila:
 
 ```css
---brand-font-display: var(--font-display, "Gang of Three", "WokDisplayFallback", Arial, Helvetica, sans-serif);
---brand-font-body: var(--font-body, Lato, system-ui, …, sans-serif);
---brand-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+--font-display: var(--font-wok-display, var(--brand-font-display), "WokDisplayFallback", Arial, Helvetica, sans-serif);
+--font-sans: var(--font-wok-body, var(--brand-font-body), system-ui, …, sans-serif);
+--font-mono: var(--font-wok-mono, var(--brand-font-mono));
 ```
 
-El contrato es el nombre de la variable: el sitio carga `next/font` con `variable: "--font-display"` (Gang of Three) y `variable: "--font-body"` (Lato, renombrada "WOK Sans" por la OFL), puestas en `<html>`. Gang of Three es provisoria y su licencia está pendiente (ADR 0001).
+Si falta una variable del sitio, cae al nombre del token y después al respaldo: nunca queda vacía. Gang of Three es provisoria y su licencia está pendiente (ADR 0001).
 
 ## Qué publica
 
@@ -76,7 +89,7 @@ Rampas (`color/<familia>/<stop>`, 50–950): `neutral`, `paper` (marfil), `brand
 - `check-ramps`: monotonía, matiz, croma y `neutral` acromático.
 - `check-contrast`: los pares de `scripts/contrast-pairs.json`, WCAG 2 en claro y oscuro.
 
-Cada chequeo tiene una lista `ALLOW`, la única vía para que algo en falla pase, con motivo escrito. En rampas y contraste arranca vacía.
+Cada chequeo tiene una lista `ALLOW`, la única vía para que algo en falla pase, con motivo escrito. Rampas: vacía. Contraste: una entrada (el contorno del botón primario sobre `--surface-base` en oscuro, 2,39:1; la etiqueta identifica el botón). No hay pares informativos: todo par se mide y lo que falla se cuenta.
 
 CI (`.github/workflows/verify.yml`): `npm run verify`, `build/` y `source/*.json` al día con `source/raw`, y tag igual a la versión. Decisiones en `docs/decisions/`, estado frente al estándar en `docs/checklist-n1.md`, cambios por versión en `CHANGELOG.md`.
 
